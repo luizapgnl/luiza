@@ -12,21 +12,46 @@
     <?php
     echo "<h1> Hi haters </h1>";
 
-    $nome = "luiza";
-    $idade = 17; 
+    $nome = $_POST['nome'] ?? '';
+    $idade = $_POST['idade'] ?? null;
+    $resultado = $_POST['idade' + 'nome'] ??;
     ?>
 
-    <h1>Nome: <?= ucfirst($nome) ?></h1>
-    <p>Idade: <?= $idade ?></p>
+    <form method="POST" action="">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($nome) ?>" required>
+        </div>
+        
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" value="<?= htmlspecialchars($idade ?? '') ?>" required>
+        </div>
+        <div>
+            <label for="resultado">Resultado:</label>
+            <input type="number" id="idade" name="idade" value="<?= htmlspecialchars($idade ?? '') ?>" required>
+            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($nome) ?>" required>
+        </div>
 
-    <p>
-        Status: 
-        <?php if ($idade >= 18): ?>
-            <strong style="color: pink;">Maior de idade</strong>
-        <?php else: ?>
-            <strong style="color: red;">Menor de idade</strong>
-        <?php endif; ?>
-    </p>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <hr>
+    
+    <?php if ($nome !== '' && $idade !== null): ?>
+        <h1>Nome: <?= ucfirst(htmlspecialchars($nome)) ?></h1>
+        <p>Idade: <?= (int)$idade ?></p>
+
+        <p>
+            Status: 
+            <?php if ((int)$idade >= 18): ?>
+                <strong style="color: pink;">Maior de idade</strong>
+            <?php else: ?>
+                <strong style="color: red;">Menor de idade</strong>
+            <?php endif; ?>
+        </p>
+    <?php endif; ?>
+    
 </div>
 
 </body>
