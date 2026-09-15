@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,9 @@
 
     $nome = $_POST['nome'] ?? '';
     $idade = $_POST['idade'] ?? null;
-    $resultado = $_POST['idade' + 'nome'] ??;
+    
+    
+    $resultado = ($nome !== '' && $idade !== null) ? "{$nome} - {$idade} anos" : '';
     ?>
 
     <form method="POST" action="">
@@ -27,10 +29,10 @@
             <label for="idade">Idade:</label>
             <input type="number" id="idade" name="idade" value="<?= htmlspecialchars($idade ?? '') ?>" required>
         </div>
+
         <div>
             <label for="resultado">Resultado:</label>
-            <input type="number" id="idade" name="idade" value="<?= htmlspecialchars($idade ?? '') ?>" required>
-            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($nome) ?>" required>
+            <input type="text" id="resultado" name="resultado" value="<?= htmlspecialchars($resultado) ?>" readonly>
         </div>
 
         <button type="submit">Enviar</button>
@@ -45,7 +47,7 @@
         <p>
             Status: 
             <?php if ((int)$idade >= 18): ?>
-                <strong style="color: pink;">Maior de idade</strong>
+                <strong style="color: green;">Maior de idade</strong>
             <?php else: ?>
                 <strong style="color: red;">Menor de idade</strong>
             <?php endif; ?>
