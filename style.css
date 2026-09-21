@@ -13,122 +13,99 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 
-    
-    background: linear-gradient(135deg, #000000, #1a1a1a, #333333);
+    background: linear-gradient(135deg, #000000, #151515, #ffffff);
 
     color: #ffffff;
-
-    padding: 30px;
 }
+
+
+body > a {
+    color: #ffffff;
+    text-decoration: none;
+    background: #e30613;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+body > a:hover {
+    background: #b8000f;
+}
+
 
 .card {
-    width: 100%;
-    max-width: 500px;
+    width: 90%;
+    max-width: 550px;
 
-    padding: 30px;
+    background: #111111;
 
+    padding: 35px;
 
-    background: #ffffff;
+    border-radius: 15px;
 
-    border-radius: 20px;
+    border: 2px solid #e30613;
 
-    
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-
-    text-align: center;
-
-    
-    border-top: 6px solid #d71920;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
 }
-
 
 h1 {
-    margin-bottom: 25px;
-
-    color: #000000;
-
-    font-size: 36px;
-
     text-align: center;
-
-    
-    text-shadow: 2px 2px 0px #d71920;
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    color: #ffffff;
+    margin-bottom: 25px;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    margin-bottom: 15px;
 }
-
 
 label {
+    display: block;
     margin-bottom: 5px;
-
-    font-size: 16px;
     font-weight: bold;
-
-    color: #000000;
+    color: #ffffff;
 }
-
 
 input {
     width: 100%;
+    padding: 11px;
 
-    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 7px;
 
-    border: 2px solid #000000;
+    background: #222;
+    color: #ffffff;
 
-    border-radius: 8px;
-
-    font-size: 16px;
-
-    outline: none;
-
-    background-color: #f5f5f5;
-    color: #000000;
+    font-size: 15px;
 }
 
-
 input:focus {
-    border-color: #d71920;
-
-    box-shadow: 0 0 5px rgba(215, 25, 32, 0.5);
+    outline: none;
+    border: 2px solid #e30613;
 }
 
 
 button {
+    width: 100%;
+
+    padding: 13px;
+
     margin-top: 10px;
 
-    padding: 12px;
-
     border: none;
+    border-radius: 8px;
 
-    border-radius: 10px;
+    background: #e30613;
+    color: #ffffff;
 
-    
-    background-color: #000000;
-
-    color: white;
-
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
 
     cursor: pointer;
-
-    transition: 0.3s;
 }
 
-
 button:hover {
-    background-color: #d71920;
+    background: #b8000f;
 }
 
 
@@ -137,49 +114,34 @@ button:hover {
 
     padding: 20px;
 
-    
-    background-color: #f2f2f2;
+    background: #1c1c1c;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
-    border-left: 5px solid #d71920;
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
-    color: #000000;
+    border-left: 5px solid #e30613;
 }
-
 
 .resultado h2 {
+    color: #ffffff;
     margin-bottom: 15px;
-
-    color: #000000;
-
-    font-size: 26px;
 }
-
 
 .resultado p {
-    margin: 10px 0;
-
-    font-size: 18px;
-
-    color: #222222;
+    margin: 8px 0;
 }
+
 
 .aprovado {
-    color: #013c94;
+    color: #00ff66;
     font-weight: bold;
 }
-
 
 .recuperacao {
-    color: #d98200;
+    color: #ffd000;
     font-weight: bold;
 }
 
-
 .reprovado {
-    color: #d71920;
+    color: #ff3333;
     font-weight: bold;
 }
