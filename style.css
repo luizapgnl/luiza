@@ -15,7 +15,7 @@ body {
 
     background: linear-gradient(135deg, #000000, #000000);
 
-    color: #4a2c1a;
+    color: #f5f5f5;
 
     padding: 30px;
 }
@@ -26,11 +26,11 @@ body {
 
     padding: 30px;
 
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(110, 1, 1, 0.404);
 
     border-radius: 20px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(218, 0, 0, 0.493);
 
     text-align: center;
 }
@@ -38,13 +38,13 @@ body {
 h1 {
     margin-bottom: 25px;
 
-    color: #c96b00;
+    color: #3d3c3b;
 
     font-size: 36px;
 
     text-align: center;
 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
 form {
@@ -65,7 +65,7 @@ label {
     font-size: 16px;
     font-weight: bold;
 
-    color: #8b4513;
+    color: #570000;
 }
 
 input {
