@@ -13,9 +13,10 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
 
-    background: linear-gradient(135deg, #000000, #000000);
+    
+    background: linear-gradient(135deg, #000000, #1a1a1a, #333333);
 
-    color: #f5f5f5;
+    color: #ffffff;
 
     padding: 30px;
 }
@@ -26,26 +27,34 @@ body {
 
     padding: 30px;
 
-    background: rgba(110, 1, 1, 0.404);
+
+    background: #ffffff;
 
     border-radius: 20px;
 
-    box-shadow: 0 8px 25px rgba(218, 0, 0, 0.493);
+    
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 
     text-align: center;
+
+    
+    border-top: 6px solid #d71920;
 }
+
 
 h1 {
     margin-bottom: 25px;
 
-    color: #3d3c3b;
+    color: #000000;
 
     font-size: 36px;
 
     text-align: center;
 
-    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    
+    text-shadow: 2px 2px 0px #d71920;
 }
+
 
 form {
     display: flex;
@@ -59,32 +68,41 @@ form div {
     text-align: left;
 }
 
+
 label {
     margin-bottom: 5px;
 
     font-size: 16px;
     font-weight: bold;
 
-    color: #570000;
+    color: #000000;
 }
+
 
 input {
     width: 100%;
 
     padding: 10px;
 
-    border: 2px solid #f0c27b;
+    border: 2px solid #000000;
 
     border-radius: 8px;
 
     font-size: 16px;
 
     outline: none;
+
+    background-color: #f5f5f5;
+    color: #000000;
 }
 
+
 input:focus {
-    border-color: #c96b00;
+    border-color: #d71920;
+
+    box-shadow: 0 0 5px rgba(215, 25, 32, 0.5);
 }
+
 
 button {
     margin-top: 10px;
@@ -95,7 +113,8 @@ button {
 
     border-radius: 10px;
 
-    background-color: #c96b00;
+    
+    background-color: #000000;
 
     color: white;
 
@@ -103,50 +122,64 @@ button {
     font-weight: bold;
 
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
+
 button:hover {
-    background-color: #a95600;
+    background-color: #d71920;
 }
+
 
 .resultado {
     margin-top: 25px;
 
     padding: 20px;
 
-    background-color: rgba(255, 255, 255, 0.7);
+    
+    background-color: #f2f2f2;
 
     border-radius: 12px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #d71920;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    color: #000000;
 }
+
 
 .resultado h2 {
     margin-bottom: 15px;
 
-    color: #8b4513;
+    color: #000000;
+
+    font-size: 26px;
 }
+
 
 .resultado p {
     margin: 10px 0;
 
     font-size: 18px;
+
+    color: #222222;
 }
 
 .aprovado {
-    color: green;
+    color: #013c94;
     font-weight: bold;
 }
+
 
 .recuperacao {
     color: #d98200;
     font-weight: bold;
 }
 
+
 .reprovado {
-    color: red;
+    color: #d71920;
     font-weight: bold;
 }
-
-
-
