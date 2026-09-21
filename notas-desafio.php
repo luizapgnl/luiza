@@ -114,14 +114,14 @@
 
     <?php
 
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $nome = trim($_POST["nome"]);
-        $idade = (int) $_POST["idade"];
-        $nota1 = (float) $_POST["nota1"];
-        $nota2 = (float) $_POST["nota2"];
-        $nota3 = (float) $_POST["nota3"];
-        $nota4 = (float) $_POST["nota4"];
-        $nota5 = (float) $_POST["nota5"];
+    if ($_SERVER["REQUEST_METHOD"] === "GET") {
+        $nome = trim($_GET["nome"]);
+        $idade = (int) $_GET["idade"];
+        $nota1 = (float) $_GET["nota1"];
+        $nota2 = (float) $_GET["nota2"];
+        $nota3 = (float) $_GET["nota3"];
+        $nota4 = (float) $_GET["nota4"];
+        $nota5 = (float) $_GET["nota5"];
 
 
         $media = (
