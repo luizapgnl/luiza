@@ -12,6 +12,7 @@
     <h2>Resultado do Aluno</h2>
 
     <?php
+    
     $nota1 = $_POST["nota1"] ?? 0;
     $nota2 = $_POST["nota2"] ?? 0;
     $nota3 = $_POST["nota3"] ?? 0;
