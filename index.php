@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <a href= "notas.php"> atividade </a>
 <div class="card">
 
     <h1>Calcular Médias</h1>
