@@ -1,8 +1,6 @@
 <?php
-
 require "conexao.php";
 
-// criação da tabela de jogos
 $sql = "CREATE TABLE IF NOT EXISTS jogos (
     id INT PRIMARY KEY
 AUTO_INCREMENT,
@@ -21,19 +19,14 @@ $pdo->exec($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de jogos</title>
-
-    <link rel="stylesheet"
-href="style.css">
-
+    <link rel="stylesheet"href="style.css">
 </head>
 
 <body>
-
     <div class="card">
         <h1>Cadastro de jogos</h1>
-
         <form method="POST">
-        
+    
             <div>
                 <label> Nome do jogo:</label>
                 <input type="text" name="nome" required>
