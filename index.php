@@ -1,5 +1,5 @@
 <?php
-    require "conexão.php";
+    require "conexao.php";
 
     echo "\nMeu sistema está conectado!";
     $sql = "CREATE TABLE IF NOT EXISTS teste (
