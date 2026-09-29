@@ -47,20 +47,20 @@ $pdo->exec($sql);
 
         <?php
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
             $nome = $_POST["nome"];
             $genero = $_POST["genero"];
             $nota = $_POST["nota"];
 
-            $sql = "INSERT INTO Cadastro de jogos (nome, genero, nota)
+            $sql = "INSERT INTO jogos (nome, genero, nota)
                     VALUES ('$nome', '$genero', '$nota')";
 
             $pdo->exec($sql);
 
+
             echo "<p>Jogo cadastrado com sucesso!</p>";
         }
-        
         ?>
     </div>
 </body>
