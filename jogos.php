@@ -1,7 +1,7 @@
 <?php
 require "conexao.php";
 
-$sql = "CREATE TABLE IF NOT EXISTS jogos (
+$sql = "CREATE TABLE IF NOT EXISTS jogos(
     id INT PRIMARY KEY
 AUTO_INCREMENT,
     nome VARCHAR(100),
@@ -53,7 +53,7 @@ $pdo->exec($sql);
             $genero = $_POST["genero"];
             $nota = $_POST["nota"];
 
-            $sql = "INSERT INTO jogos (nome, genero, nota)
+            $sql = "INSERT INTO Cadastro de jogos (nome, genero, nota)
                     VALUES ('$nome', '$genero', '$nota')";
 
             $pdo->exec($sql);
