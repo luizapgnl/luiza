@@ -1,18 +1,7 @@
 <?php
 require "conexao.php";
 
-
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$sql = "CREATE TABLE IF NOT EXISTS jogos(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
-    genero VARCHAR(50) NOT NULL,
-    nota INT NOT NULL,
-    ano_lancamento INT NULL
-)";
-
-$pdo->exec($sql);
 
 $mensagem = "";
 
@@ -20,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"] ?? '';
     $genero = $_POST["genero"] ?? '';
     $nota = $_POST["nota"] ?? '';
-    $ano_lancamento = !empty($_POST["ano_lancamento"]) ? $_POST["ano_lancamento"] : null;
+    $ano_lancamento = $_POST["ano_lancamento"] ?? '';
 
     try {
         $stmt = $pdo->prepare("INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES (:nome, :genero, :nota, :ano_lancamento)");
@@ -28,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindValue(':nome', $nome);
         $stmt->bindValue(':genero', $genero);
         $stmt->bindValue(':nota', $nota, PDO::PARAM_INT);
-        $stmt->bindValue(':ano_lancamento', $ano_lancamento, is_null($ano_lancamento) ? PDO::PARAM_NULL : PDO::PARAM_INT);
+        $stmt->bindValue(':ano_lancamento', $ano_lancamento, PDO::PARAM_INT);
         
         $stmt->execute();
         $mensagem = "<p style='color: green;'>Jogo cadastrado com sucesso!</p>";
@@ -71,7 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div>
                 <label>Ano de Lançamento:</label>
-                <input type="number" name="ano_lancamento" min="1950" max="2030">
+                <!-- Adicionado 'required' aqui -->
+                <input type="number" name="ano_lancamento" min="1950" max="2030" required>
             </div>
         
             <button type="submit">Cadastrar</button>
