@@ -1,21 +1,39 @@
 <?php
 session_start();
-require_once 'conexao.php'; 
+
+
+$pdo = null;
+$erro_banco = null;
+
+try {
+    if (file_exists('conexao.php')) {
+        require_once 'conexao.php';
+    } else {
+        $erro_banco = "O arquivo 'conexao.php' não foi encontrado.";
+    }
+} catch (Exception $e) {
+    $erro_banco = "Erro ao conectar ao banco de dados: " . $e->getMessage();
+}
+
 $pagina = isset($_GET['pagina']) ? $_GET['pagina'] : 'jogo';
 
 
 if ($pagina === 'jogo') {
+    $mensagem_jogo = "";
+
+   
     if (!isset($_SESSION['numero_secreto']) || isset($_GET['reiniciar'])) {
         $_SESSION['numero_secreto'] = rand(1, 100);
         $_SESSION['tentativas'] = 0;
         $mensagem_jogo = "Jogo iniciado! Tente adivinhar o número entre 1 e 100.";
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['chute'])) {
+    // Processa o palpite enviado via POST
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['chute'])) {
         $chute = (int)$_POST['chute'];
         $_SESSION['tentativas']++;
 
-        if ($chute == $_SESSION['numero_secreto']) {
+        if ($chute === $_SESSION['numero_secreto']) {
             $mensagem_jogo = "🎉 Parabéns! Você acertou o número " . $_SESSION['numero_secreto'] . " em " . $_SESSION['tentativas'] . " tentativas!";
         } elseif ($chute < $_SESSION['numero_secreto']) {
             $mensagem_jogo = "📈 Tente um número MAIOR!";
@@ -27,34 +45,45 @@ if ($pagina === 'jogo') {
 
 
 if ($pagina === 'cadastro') {
-    
-    $sqlCriarTabela = "CREATE TABLE IF NOT EXISTS jogos (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        nome VARCHAR(100) NOT NULL,
-        genero VARCHAR(50) NOT NULL,
-        nota INT NOT NULL,
-        ano_lancamento INT NOT NULL
-    )";
-    $pdo->exec($sqlCriarTabela);
-
     $mensagem_cadastro = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cadastrar_jogo'])) {
-        $nome = $_POST["nome"];
-        $genero = $_POST["genero"];
-        $nota = (int)$_POST["nota"];
-        $ano_lancamento = (int)$_POST["ano_lancamento"];
+    if ($erro_banco) {
+        $mensagem_cadastro = "<span style='color: red;'>⚠️ $erro_banco</span>";
+    } else if ($pdo) {
+        try {
+            $sqlCriarTabela = "CREATE TABLE IF NOT EXISTS jogos (
+                id INT AUTO_INCREMENT PRIMARY KEY,
+                nome VARCHAR(100) NOT NULL,
+                genero VARCHAR(50) NOT NULL,
+                nota INT NOT NULL,
+                ano_lancamento INT NOT NULL
+            )";
+            $pdo->exec($sqlCriarTabela);
 
-      
-        $stmt = $pdo->prepare("INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES (:nome, :genero, :nota, :ano)");
-        $stmt->execute([
-            ':nome' => $nome,
-            ':genero' => $genero,
-            ':nota' => $nota,
-            ':ano' => $ano_lancamento
-        ]);
+            
+            if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['cadastrar_jogo'])) {
+                $nome = trim($_POST["nome"]);
+                $genero = trim($_POST["genero"]);
+                $nota = (int)$_POST["nota"];
+                $ano_lancamento = (int)$_POST["ano_lancamento"];
 
-        $mensagem_cadastro = "Jogo cadastrado com sucesso!";
+                if (!empty($nome) && !empty($genero)) {
+                    $stmt = $pdo->prepare("INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES (:nome, :genero, :nota, :ano)");
+                    $stmt->execute([
+                        ':nome'   => $nome,
+                        ':genero' => $genero,
+                        ':nota'   => $nota,
+                        ':ano'    => $ano_lancamento
+                    ]);
+
+                    $mensagem_cadastro = "<span style='color: green; font-weight: bold;'>✅ Jogo cadastrado com sucesso!</span>";
+                } else {
+                    $mensagem_cadastro = "<span style='color: red;'>Por favor, preencha todos os campos.</span>";
+                }
+            }
+        } catch (PDOException $e) {
+            $mensagem_cadastro = "<span style='color: red;'>Erro no banco de dados: " . htmlspecialchars($e->getMessage()) . "</span>";
+        }
     }
 }
 ?>
@@ -81,11 +110,11 @@ if ($pagina === 'cadastro') {
 
     <?php if ($pagina === 'jogo'): ?>
         <h2>🎮 Jogo da Adivinhação (1 a 100)</h2>
-        <p><strong><?php echo isset($mensagem_jogo) ? $mensagem_jogo : ''; ?></strong></p>
+        <p><strong><?php echo htmlspecialchars($mensagem_jogo); ?></strong></p>
 
         <form method="POST" action="index.php?pagina=jogo">
             <label for="chute">Seu Palpite:</label>
-            <input type="number" id="chute" name="chute" min="1" max="100" required>
+            <input type="number" id="chute" name="chute" min="1" max="100" required autofocus>
             <button type="submit">Chutar</button>
         </form>
 
@@ -96,7 +125,7 @@ if ($pagina === 'cadastro') {
         <h2>📝 Cadastrar Jogo no Banco de Dados</h2>
 
         <?php if (!empty($mensagem_cadastro)): ?>
-            <p style="color: green; font-weight: bold;"><?php echo $mensagem_cadastro; ?></p>
+            <p><?php echo $mensagem_cadastro; ?></p>
         <?php endif; ?>
 
         <form action="index.php?pagina=cadastro" method="POST">
