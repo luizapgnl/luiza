@@ -23,5 +23,7 @@
     <a href= "notas.php"> Verificador de notas</a><br><br>
     <a href= "notas3desafio.php"> Desafio notas</a><br><br>
     <a href= "login-basico.php"> Login</a><br><br>
+    <a href= "cadastrar.php"> Cadastrar no Jogo</a><br><br>
+    <a href= "jogo.php"> Jogo</a><br><br>
 </body>
 </html>
