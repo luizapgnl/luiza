@@ -27,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['chute'])) {
 <head>
     <meta charset="UTF-8">
     <title>Jogo da Adivinhação em PHP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
