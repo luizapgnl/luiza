@@ -1,14 +1,19 @@
 <?php
-    require "conexao.php";
+require "conexao.php";
 
-    echo "\nMeu sistema está conectado!";
+$mensagem_conexao = "Meu sistema está conectado!";
+$mensagem_tabela = "Tabela sincronizada com sucesso!";
+
+try {
     $sql = "CREATE TABLE IF NOT EXISTS teste (
         id INT AUTO_INCREMENT PRIMARY KEY, 
-        nome VARCHAR (100),
+        nome VARCHAR(100),
         idade INT
-        )";
-        $pdo->exec($sql);
-        echo"<br> Tabela criada com sucesso!";
+    )";
+    $pdo->exec($sql);
+} catch (PDOException $e) {
+    $mensagem_tabela = "Erro na tabela: " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,15 +22,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividades em PHP</title>
-
     <link rel="stylesheet" href="style-index.css">
-    
 </head>
 <body>
-    <a href= "idade.php"> Verificador de idade</a><br><br>
-    <a href= "notas.php"> Verificador de notas</a><br><br>
-    <a href= "notas3desafio.php"> Desafio notas</a><br><br>
-    <a href= "login-basico.php"> Login</a><br><br>
-    <a href= "jogos.php"> Cadastrar no Jogo</a><br><br>
+
+    <div class="menu-card">
+        <div class="status-box">
+            <p>⚡ <?= $mensagem_conexao ?></p>
+            <p>✔️ <?= $mensagem_tabela ?></p>
+        </div>
+
+        <h1>Atividades PHP</h1>
+        <p class="subtitulo">Selecione um projeto para acessar</p>
+
+        <div class="nav-links">
+            <a href="idade.php" class="btn-menu">Verificador de idade</a>
+            <a href="notas.php" class="btn-menu">Verificador de notas</a>
+            <a href="notas3desafio.php" class="btn-menu">Desafio notas</a>
+            <a href="login-basico.php" class="btn-menu">Login</a>
+            <a href="jogos.php" class="btn-menu btn-destaque">Cadastrar no Jogo</a>
+        </div>
+    </div>
+
 </body>
 </html>
