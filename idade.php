@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Idade</title>
+    <title>Hi Haters</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,23 +16,23 @@
     $resultado = ($nome !== '' && $idade !== null) ? "{$nome} - {$idade} anos" : '';
     ?>
 
-    <h1>Verificador de Idade</h1>
-    <p class="subtitulo">Preencha os dados abaixo para consultar</p>
+    <h1>Hi Ha</h1>
+    <p class="subtitulo">Verificação de Idade</p>
 
     <form method="POST" action="">
         <div>
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($nome) ?>" placeholder="Digite seu nome" required>
+            <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($nome) ?>" placeholder="Digite o nome" required>
         </div>
         
         <div>
             <label for="idade">Idade:</label>
-            <input type="number" id="idade" name="idade" value="<?= htmlspecialchars($idade ?? '') ?>" placeholder="Digite sua idade" required>
+            <input type="number" id="idade" name="idade" value="<?= htmlspecialchars($idade ?? '') ?>" placeholder="Digite a idade" required>
         </div>
 
         <div>
             <label for="resultado">Resultado:</label>
-            <input type="text" id="resultado" name="resultado" value="<?= htmlspecialchars($resultado) ?>" readonly placeholder="O resultado aparecerá aqui">
+            <input type="text" id="resultado" name="resultado" value="<?= htmlspecialchars($resultado) ?>" readonly placeholder="Aguardando dados...">
         </div>
 
         <button type="submit">Enviar</button>
@@ -53,7 +53,7 @@
         </div>
     <?php endif; ?>
 
-    <a href="index.php" class="btn-menu">← Voltar ao Menu</a>
+    <a href="index.php" class="btn-menu" style="margin-top: 15px;">← Voltar ao Menu</a>
 </div>
 
 </body>
