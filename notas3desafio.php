@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas do Aluno</title>
-    <link rel="stylesheet" href="style2.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,13 +14,16 @@
 <div class="card">
 
     <h1>Notas do Aluno</h1>
-    <form method="POST" action="notas.php">
+    <p class="subtitulo">Preencha os dados abaixo para calcular a média</p>
+
+    <form method="POST" action="">
         <div>
             <label for="nome">Nome do aluno:</label>
             <input
                 type="text"
                 id="nome"
                 name="nome"
+                placeholder="Digite o nome do aluno"
                 required
                 value="<?= htmlspecialchars($_POST['nome'] ?? '') ?>"
             >
@@ -32,6 +36,7 @@
                 id="idade"
                 name="idade"
                 min="0"
+                placeholder="Digite a idade"
                 required
                 value="<?= htmlspecialchars($_POST['idade'] ?? '') ?>"
             >
@@ -46,13 +51,14 @@
                 min="0"
                 max="10"
                 step="0.1"
+                placeholder="0.0 a 10.0"
                 required
+                value="<?= htmlspecialchars($_POST['nota1'] ?? '') ?>"
             >
         </div>
 
         <div>
             <label for="nota2">Nota 2 (Peso 3):</label>
-
             <input
                 type="number"
                 id="nota2"
@@ -60,13 +66,14 @@
                 min="0"
                 max="10"
                 step="0.1"
+                placeholder="0.0 a 10.0"
                 required
+                value="<?= htmlspecialchars($_POST['nota2'] ?? '') ?>"
             >
         </div>
 
         <div>
             <label for="nota3">Nota 3 (Peso 1):</label>
-
             <input
                 type="number"
                 id="nota3"
@@ -74,13 +81,14 @@
                 min="0"
                 max="10"
                 step="0.1"
+                placeholder="0.0 a 10.0"
                 required
+                value="<?= htmlspecialchars($_POST['nota3'] ?? '') ?>"
             >
         </div>
 
         <div>
             <label for="nota4">Nota 4 (Peso 1):</label>
-
             <input
                 type="number"
                 id="nota4"
@@ -88,13 +96,14 @@
                 min="0"
                 max="10"
                 step="0.1"
+                placeholder="0.0 a 10.0"
                 required
+                value="<?= htmlspecialchars($_POST['nota4'] ?? '') ?>"
             >
         </div>
 
         <div>
             <label for="nota5">Nota 5 (Peso 3):</label>
-
             <input
                 type="number"
                 id="nota5"
@@ -102,27 +111,25 @@
                 min="0"
                 max="10"
                 step="0.1"
+                placeholder="0.0 a 10.0"
                 required
+                value="<?= htmlspecialchars($_POST['nota5'] ?? '') ?>"
             >
         </div>
 
-        <button type="submit">
-            Calcular média
-        </button>
+        <button type="submit">Calcular média</button>
 
     </form>
 
     <?php
-
-    if ($_SERVER["REQUEST_METHOD"] === "GET") {
-        $nome = trim($_GET["nome"]);
-        $idade = (int) $_GET["idade"];
-        $nota1 = (float) $_GET["nota1"];
-        $nota2 = (float) $_GET["nota2"];
-        $nota3 = (float) $_GET["nota3"];
-        $nota4 = (float) $_GET["nota4"];
-        $nota5 = (float) $_GET["nota5"];
-
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $nome = trim($_POST["nome"] ?? '');
+        $idade = (int) ($_POST["idade"] ?? 0);
+        $nota1 = (float) ($_POST["nota1"] ?? 0);
+        $nota2 = (float) ($_POST["nota2"] ?? 0);
+        $nota3 = (float) ($_POST["nota3"] ?? 0);
+        $nota4 = (float) ($_POST["nota4"] ?? 0);
+        $nota5 = (float) ($_POST["nota5"] ?? 0);
 
         $media = (
             ($nota1 * 2) +
@@ -132,74 +139,38 @@
             ($nota5 * 3)
         ) / 10;
 
-
-      
-
         if ($media >= 7) {
-
             $situacao = "APROVADO";
             $classeSituacao = "aprovado";
-
         } elseif ($media >= 5) {
-
             $situacao = "RECUPERAÇÃO";
             $classeSituacao = "recuperacao";
-
         } else {
-
             $situacao = "REPROVADO";
             $classeSituacao = "reprovado";
         }
-
         ?>
 
-
-        <div class="resultado">
-
+        <div class="resultado" style="margin-top: 20px;">
             <h2>Resultado</h2>
 
-            <p>
-                <strong>Nome:</strong>
-                <?= htmlspecialchars($nome) ?>
-            </p>
-
-            <p>
-                <strong>Idade:</strong>
-                <?= $idade ?> anos
-            </p>
-
-            <p>
-                <strong>Média:</strong>
-                <?= number_format($media, 1, ',', '.') ?>
-            </p>
-
+            <p><strong>Nome:</strong> <?= htmlspecialchars($nome) ?></p>
+            <p><strong>Idade:</strong> <?= $idade ?> anos</p>
+            <p><strong>Média:</strong> <?= number_format($media, 1, ',', '.') ?></p>
             <p>
                 <strong>Situação:</strong>
-
-                <span class="<?= $classeSituacao ?>">
-                    <?= $situacao ?>
-                </span>
-
+                <span class="<?= $classeSituacao ?>"><?= $situacao ?></span>
             </p>
-
         </div>
-
 
         <?php
     }
     ?>
 
-
-    <div class="links">
-
-        <a href="index.php">
-            Calcular médias
-        </a>
-
-        <a href="idade.php">
-            Verificar idade
-        </a>
-
+    
+    <div class="menu-options" style="margin-top: 20px;">
+        <a href="index.php" class="btn-menu">Calcular médias</a>
+        <a href="idade.php" class="btn-menu">Verificar idade</a>
     </div>
 
 </div>
