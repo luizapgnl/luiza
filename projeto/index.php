@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/style-index.css">
 </head>
 <body>
 <section id="inicio" class= "inicio">
@@ -139,7 +140,7 @@
     <section id= "conatato" class="secao secao detaque">
         <h3 class="titulo-secao">Contato</h3>
         <p class="subtitulo-secao">
-            Quer emtrar e contato comigo>
+            Quer entrar e contato comigo>
         </p>
     <div class= "contato-container">
         <div class= "contato-item">

@@ -2,93 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
 }
 
-body {
-    min-height: 100vh;
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    color: black;
+    line-height: 1.6;
+}
+/*MENU*/
+header{
+    background-color: black;
+    position:sticky;
+    top: 0;
+    z-index: 100;
+}
+
+navbar{
+    max-width: 100;
+    margin: auto;
+
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background: radial-gradient(circle at center, #23083b 0%, #0d0216 100%);
-    color: #ffffff;
+
     padding: 20px;
-}
-
-.menu-card {
-    width: 100%;
-    max-width: 420px;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(192, 132, 252, 0.18);
-    border-radius: 24px;
-    padding: 35px 30px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
-                inset 0 1px 1px rgba(255, 255, 255, 0.1);
-    text-align: center;
-}
-
-.status-box {
-    background: rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(168, 85, 247, 0.2);
-    border-radius: 12px;
-    padding: 10px 14px;
-    margin-bottom: 25px;
-    font-size: 0.8rem;
-    color: #c084fc;
-    line-height: 1.4;
-}
-
-h1 {
-    font-size: 1.6rem;
-    color: #ffffff;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-
-.subtitulo {
-    font-size: 0.85rem;
-    color: #a855f7;
-    margin-bottom: 28px;
-}
-
-.nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.btn-menu {
-    display: block;
-    width: 100%;
-    padding: 14px 20px;
-    text-decoration: none;
-    color: #f3e8ff;
-    font-size: 0.95rem;
-    font-weight: 600;
-    background: rgba(147, 51, 234, 0.25);
-    border: 1px solid rgba(192, 132, 252, 0.3);
-    border-radius: 50px; /* Bordas bem arredondadas como na imagem */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.btn-menu:hover {
-    background: rgba(168, 85, 247, 0.5);
-    border-color: #c084fc;
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
-}
-
-.btn-destaque {
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
-    border: none;
-    color: #ffffff;
-}
-
-.btn-destaque:hover {
-    background: linear-gradient(135deg, #a78bfa, #7c3aed);
-    box-shadow: 0 0 25px rgba(167, 139, 250, 0.6);
 }
