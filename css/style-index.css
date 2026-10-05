@@ -22,7 +22,7 @@ header{
     z-index: 100;
 }
 
-navbar{
+.navbar{
     max-width: 100;
     margin: auto;
 
@@ -31,4 +31,18 @@ navbar{
     align-items: center;
 
     padding: 20px;
+}
+
+.logo{
+    color: white;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.menu a{
+    color: #dddddd;
+    
 }
