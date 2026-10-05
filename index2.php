@@ -75,12 +75,12 @@
         <!--PROJETO 2 -->
         <div class= "projeto - card">
         <div class= "projeto - numero">
-            01
+            02
         </div>
-        <h3> Verificacao de idade </h3>
+        <h3> Verificacao de Notas </h3>
         <p>
             Sistema desenvolvido para praticar
-            formuláeios e manipulação de dados.
+            as notas dos estudantes.
         </p>
 
         <div class= "tecnologias">
@@ -89,5 +89,9 @@
             <spam>PHP</spam>
         </section>
         </div>
+        <a href= "projeto/notas.php" class="link-projeto">
+        Ver projeto →
+        </a>
+        
 
 </html>
