@@ -36,11 +36,11 @@ try {
         <p class="subtitulo">Selecione um projeto para acessar</p>
 
         <div class="nav-links">
-            <a href="idade.php" class="btn-menu">Verificador de idade</a>
-            <a href="notas.php" class="btn-menu">Verificador de notas</a>
-            <a href="notas3desafio.php" class="btn-menu">Desafio notas</a>
-            <a href="login-basico.php" class="btn-menu">Login</a>
-            <a href="jogos.php" class="btn-menu btn-destaque">Cadastrar no Jogo</a>
+            <a href="/projeto/idade.php" class="btn-menu">Verificador de idade</a>
+            <a href="/projeto/notas.php" class="btn-menu">Verificador de notas</a>
+            <a href="/projeto/notas3desafio.php" class="btn-menu">Desafio notas</a>
+            <a href="/projeto/login-basico.php" class="btn-menu">Login</a>
+            <a href="/projeto/jogos.php" class="btn-menu btn-destaque">Cadastrar no Jogo</a>
         </div>
     </div>
 
