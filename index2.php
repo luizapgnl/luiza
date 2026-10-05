@@ -6,10 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
-</body>
-</html>
-
 <section id="inicio" class= "inicio">
     <div class="inicio-conteudo">
     <p class="saudacao">Olá !Eu sou</p>
@@ -23,3 +19,5 @@
         Ver meus projetos
     </a>
      </section>
+</body>
+</html>
