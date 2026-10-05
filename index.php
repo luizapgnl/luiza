@@ -153,11 +153,6 @@
         <p>github.com/luizapgnl/p>
         </div>
 
-        <div class= "contato-item">
-        <h3>Linkedin</h3>
-        <p>github.com/luizapgnl/p>
-        </div>
-        </div>
         </section>
 </main>
 
