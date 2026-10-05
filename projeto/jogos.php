@@ -1,5 +1,5 @@
 <?php
-require "conexao.php";
+require __DIR__. "/../conexao.php";
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de jogos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jogos.css">
 </head>
 
 <body>
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div>
                 <label>Ano de Lançamento:</label>
-                <!-- Adicionado 'required' aqui -->
+                
                 <input type="number" name="ano_lancamento" min="1950" max="2030" required>
             </div>
         
