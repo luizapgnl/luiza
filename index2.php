@@ -70,7 +70,7 @@
         <a href= "projeto/idade.php" class="link-projeto">
         Ver projeto →
         </a>
-
+        </div>
 
         <!--PROJETO 2 -->
         <div class= "projeto - card">
@@ -92,6 +92,74 @@
         <a href= "projeto/notas.php" class="link-projeto">
         Ver projeto →
         </a>
+        </div>
+
+         <!--PROJETO 3 -->
+         <div class= "projeto - card">
+        <div class= "projeto - numero">
+            03
+        </div>
+        <h3> Login Básico </h3>
+        <p>
+            Sistema desenvolvido para realizar um login.
+        </p>
+
+        <div class= "tecnologias">
+            <spam>HTML</spam>
+            <spam>CSS</spam>
+            <spam>PHP</spam>
+        </section>
+        </div>
+        <a href= "projeto/login.php" class="link-projeto">
+        Ver projeto →
+        </a>
+        </div>
+
+         <!--PROJETO 4 -->
+         <div class= "projeto - card">
+        <div class= "projeto - numero">
+            04
+        </div>
+        <h3> Jogos </h3>
+        <p>
+            Sistema desenvolvido para dar notas aos jogos.
+        </p>
+
+        <div class= "tecnologias">
+            <spam>HTML</spam>
+            <spam>CSS</spam>
+            <spam>PHP</spam>
+        </section>
+        </div>
+        <a href= "projeto/jogos.php" class="link-projeto">
+        Ver projeto →
+        </a>
+        </div>
+        </section>
+    <section id= "conatato" class="secao secao detaque">
+        <h3 class="titulo-secao">Contato</h3>
+        <p class="subtitulo-secao">
+            Quer emtrar e contato comigo>
+        </p>
+    <div class= "contato-container">
+        <div class= "contato-item">
+        <h3>Whatsapp</h3>
+        <p> 41 99999-9999</p>
+        </div>
         
 
+        <div class= "contato-item">
+        <h3>Github</h3>
+        <p>github.com/luizapgnl/p>
+        </div>
+
+        <div class= "contato-item">
+        <h3>Linkedin</h3>
+        <p>github.com/luizapgnl/p>
+        </div>
+        </div>
+        </section>
+
+</body>
 </html>
+
