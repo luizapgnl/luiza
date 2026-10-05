@@ -159,7 +159,13 @@
         </div>
         </div>
         </section>
+</main>
 
+<footer>
+    <p>
+        Desenvolvido por <a href= https://ana315.devlook.xyz> Ana Luiza</a> • 2026
+    </p>
+</footer>
 </body>
 </html>
 
