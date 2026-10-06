@@ -266,3 +266,17 @@ sobre-texto p {
     color: blue;
     margin-bottom: 5px;
 }
+/*rodapé*/
+
+footer {
+    background-color: black;
+    color:#cccccc;
+    text-align: center;
+    padding: 30px;
+}
+
+/*responsividade*/
+
+@media (max-width: 800px) {
+    
+}
