@@ -243,3 +243,26 @@ sobre-texto p {
 }
 
 /* link de contato*/
+.link-projeto {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-projeto:hover{
+    text-decoration: underline;
+}
+
+/*contato*/
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contato-item h3 {
+    color: blue;
+    margin-bottom: 5px;
+}
