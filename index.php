@@ -190,7 +190,7 @@
                     <span>CSS</span>
                 </div>
 
-                <a href="projetos/jogos.php" class="link-projetos">
+                <a href="projetos/jogos.php" class="link-projeto">
                     Abrir atividade →
                 </a>
 
