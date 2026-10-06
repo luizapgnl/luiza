@@ -224,3 +224,22 @@ sobre-texto p {
     margin-bottom: 20px;
 }
 
+/* tecnologias utilizadas */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tecnologias span{
+    background-color: aliceblue;
+    color: blue;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* link de contato*/
