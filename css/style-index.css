@@ -84,3 +84,65 @@ header{
     margin-bottom: 20px;
 }
 
+.inicio-conteudo > p{
+    max-width: 600px;
+}
+.botao{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+
+    background-color: blue;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.botao-hover {
+    background-color: blue;
+}
+
+/* SEÇÕES */
+
+.secao {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.subtitulo-secao{
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 40px;
+}
+
+/* sobre mim*/
+
+.sobre-conteudo{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    color: #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.sobre-texto h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
