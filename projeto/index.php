@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style-index.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
 <section id="inicio" class= "inicio">
@@ -23,8 +23,8 @@
     </a>
 </div>
 </div>
-     </section>
-     <section id= "habilidades" class="secao secao detaque">
+    </section>
+    <section id= "habilidades" class="secao secao detaque">
         <h2 class="subtitulo-secao"> Minhas Habilidades</h2>
         <p class="subtitulo-secao">
             Algumas tecnologias que eu estou estudando
