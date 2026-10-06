@@ -1,168 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/index.css">
+
+    <title>Atividades PHP</title>
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-<section id="inicio" class= "inicio">
-    <div class="inicio-conteudo">
-    <p class="saudacao">Olá !Eu sou</p>
-    <h2>Desenvolvedora em formação</h2>
-    <p>
-    Me chamo Ana Luiza, tenho 17 anos e sou estudante da area de tecnologia.
-    Atualmente estou cursando tecnico em Desenvolvimento de Sistemas e estudando Python e C, com foco em logica de programacao e desenvolvimento de software.
-    Tenho interesse em aprender cada vez mais e construir uma base solida na area de programacao
-    </p>
-    <p> Meu objetivo é cntinuar evoluindo como 
-        desenvolvedora e aprender novas tecnologias. </p>
-    <a href="#projetos" class="botao">
-        Ver meus projetos
-    </a>
-</div>
-</div>
+
+    <header>
+        <nav class="navbar">
+
+            <h2 class="logo">Ana Luiza</h2>
+
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- INÍCIO -->
+
+    <section class="inicio" id="inicio">
+
+        <div class="inicio-conteudo">
+
+            <p class="saudacao">Bem-vindo!</p>
+
+            <h1>Atividades PHP</h1>
+
+            <h2>Desenvolvimento Web</h2>
+
+            <p>
+                Página criada para organizar e acessar as atividades
+                desenvolvidas durante as aulas de PHP.
+            </p>
+
+            <a href="#atividades" class="botao">
+                Ver atividades
+            </a>
+
+        </div>
+
     </section>
-    <section id= "habilidades" class="secao secao detaque">
-        <h2 class="subtitulo-secao"> Minhas Habilidades</h2>
+
+
+    <!-- ATIVIDADES -->
+
+    <section class="secao" id="atividades">
+
+        <h2 class="titulo-secao">Minhas Atividades</h2>
+
         <p class="subtitulo-secao">
-            Algumas tecnologias que eu estou estudando
+            Selecione uma atividade para acessar.
         </p>
-        <div class="lista-habilidades">
-            <div class= "habilidade">
-                HTML
+
+
+        <div class="projetos-container">
+
+
+            <!-- IDADE -->
+
+            <div class="projeto-card">
+
+                <div class="projeto-numero">01</div>
+
+                <h3>Verificador de Idade</h3>
+
+                <p>
+                    Sistema desenvolvido em PHP para receber
+                    nome e idade do usuário.
+                </p>
+
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>PHP</span>
+                    <span>CSS</span>
+                </div>
+
+                <a href="projetos/idade.php" class="link-projeto">
+                    Abrir atividade →
+                </a>
+
             </div>
 
-            <div class="habilidade">
-            <div class= "habilidade">
-                CSS
+
+            <!-- NOTAS -->
+
+            <div class="projeto-card">
+
+                <div class="projeto-numero">02</div>
+
+                <h3>Verificador de Notas</h3>
+
+                <p>
+                    Sistema para inserir notas e verificar
+                    a situação do aluno.
+                </p>
+
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>PHP</span>
+                    <span>CSS</span>
+                </div>
+
+                <a href="projetos/notas.php" class="link-projeto">
+                    Abrir atividade →
+                </a>
+
             </div>
 
-            <div class="habilidade">
-            <div class= "habilidade">
+
+            <!-- DESAFIO -->
+
+            <div class="projeto-card">
+
+                <div class="projeto-numero">03</div>
+
+                <h3>Desafio de Notas</h3>
+
+                <p>
+                    Versão mais completa do sistema de notas,
+                    utilizando pesos e média final.
+                </p>
+
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>PHP</span>
+                    <span>CSS</span>
+                </div>
+
+                <a href="projetos/notas-desafio.php" class="link-projeto">
+                    Abrir atividade →
+                </a>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <div class="projeto-card">
+
+                <div class="projeto-numero">04</div>
+
+                <h3>Login Básico</h3>
+
+                <p>
+                    Página de autenticação simples utilizando
+                    formulário e PHP.
+                </p>
+
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>PHP</span>
+                    <span>CSS</span>
+                </div>
+
+                <a href="projetos/login-basico.php" class="link-projeto">
+                    Abrir atividade →
+                </a>
+
+            </div>
+
+
+            <!-- JOGOS -->
+
+            <div class="projeto-card">
+
+                <div class="projeto-numero">05</div>
+
+                <h3>Cadastro de Jogos</h3>
+
+                <p>
+                    Sistema para cadastrar e visualizar
+                    informações sobre jogos.
+                </p>
+
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>PHP</span>
+                    <span>CSS</span>
+                </div>
+
+                <a href="projetos/jogos.php" class="link-projeto">
+                    Abrir atividade →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="secao secao-destaque" id="sobre">
+
+        <h2 class="titulo-secao">Sobre o Projeto</h2>
+
+        <p class="subtitulo-secao">
+            Um pouco sobre esta página.
+        </p>
+
+        <div class="sobre-conteudo">
+
+            <div class="foto">
                 PHP
             </div>
+
+            <div class="sobre-texto">
+
+                <h3>Projeto de Desenvolvimento Web</h3>
+
+                <p>
+                    Esta página reúne as atividades realizadas
+                    durante as aulas de desenvolvimento web.
+                </p>
+
+                <p>
+                    Os exercícios utilizam HTML, CSS e PHP para
+                    praticar formulários, cálculos, condições,
+                    login e conexão com banco de dados.
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
-    <section id="projetos" class="secao">
-        <h2 class= "titulo-secao"> Meus Projetos</h2>
-        <p class="subtitulo-secao">
-         Alguns projetos desenvolvidos durante as aulas
-</p>
-        <div class= "projetos-container">
 
-            <!--PROJETO 1 -->
-        <div class= "projeto - card">
-        <div class= "projeto - numero">
-            01
-        </div>
-        <h3> Verificacao de idade </h3>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
         <p>
-            Sistema desenvolvido para praticar
-            formuláeios e manipulação de dados.
+            Atividades PHP - Desenvolvimento Web
         </p>
 
-        <div class= "tecnologias">
-            <spam>HTML</spam>
-            <spam>CSS</spam>
-            <spam>PHP</spam>
-        </section>
-        </div>
-        <a href= "projeto/idade.php" class="link-projeto">
-        Ver projeto →
-        </a>
-        </div>
-
-        <!--PROJETO 2 -->
-        <div class= "projeto - card">
-        <div class= "projeto - numero">
-            02
-        </div>
-        <h3> Verificacao de Notas </h3>
-        <p>
-            Sistema desenvolvido para praticar
-            as notas dos estudantes.
-        </p>
-
-        <div class= "tecnologias">
-            <spam>HTML</spam>
-            <spam>CSS</spam>
-            <spam>PHP</spam>
-        </section>
-        </div>
-        <a href= "projeto/notas.php" class="link-projeto">
-        Ver projeto →
-        </a>
-        </div>
-
-         <!--PROJETO 3 -->
-         <div class= "projeto - card">
-        <div class= "projeto - numero">
-            03
-        </div>
-        <h3> Login Básico </h3>
-        <p>
-            Sistema desenvolvido para realizar um login.
-        </p>
-
-        <div class= "tecnologias">
-            <spam>HTML</spam>
-            <spam>CSS</spam>
-            <spam>PHP</spam>
-        </section>
-        </div>
-        <a href= "projeto/login.php" class="link-projeto">
-        Ver projeto →
-        </a>
-        </div>
-
-         <!--PROJETO 4 -->
-         <div class= "projeto - card">
-        <div class= "projeto - numero">
-            04
-        </div>
-        <h3> Jogos </h3>
-        <p>
-            Sistema desenvolvido para dar notas aos jogos.
-        </p>
-
-        <div class= "tecnologias">
-            <spam>HTML</spam>
-            <spam>CSS</spam>
-            <spam>PHP</spam>
-        </section>
-        </div>
-        <a href= "projeto/jogos.php" class="link-projeto">
-        Ver projeto →
-        </a>
-        </div>
-        </section>
-    <section id= "conatato" class="secao secao detaque">
-        <h3 class="titulo-secao">Contato</h3>
-        <p class="subtitulo-secao">
-            Quer entrar e contato comigo>
-        </p>
-    <div class= "contato-container">
-        <div class= "contato-item">
-        <h3>Whatsapp</h3>
-        <p> 41 99999-9999</p>
-        </div>
-        
-
-        <div class= "contato-item">
-        <h3>Github</h3>
-        <p>github.com/luizapgnl/p>
-        </div>
-
-        </section>
-</main>
-
-<footer>
-    <p>
-        Desenvolvido por <a href= https://ana315.devlook.xyz> Ana Luiza</a> • 2026
-    </p>
-</footer>
+    </footer>
 
 </body>
-</html>
 
+</html>
