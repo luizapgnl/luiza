@@ -213,3 +213,14 @@ sobre-texto p {
     color: blue;
     margin-bottom: 15px;
 }
+
+.projeto-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    color: azure;
+    margin-bottom: 20px;
+}
+
