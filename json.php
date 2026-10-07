@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 unset($alunos[$posicao]);
             }
         }
-
+        
         // REORGANIZAR AS POSIÇÕES DO ARRAY
         $alunos = array_values($alunos);
 
