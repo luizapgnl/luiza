@@ -1,1 +1,7 @@
-[]
+[
+    { 
+        "nome": "Ana",
+        "idade": 17,
+        "curso": "Desenvolvimento de Sistemas"
+    }
+]
