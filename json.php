@@ -7,12 +7,13 @@
 
     //3. TRANSFORMAR JSON EM ARRAY PHP
     $alunos = json_decode($json, true);
+    if($_SERVER["REQUEST_METHOD"] == "POST")
 
     //4. CRIAR UM ALUNO
     $novoAluno = [
-    "nome" => "Ana Luiza",
-    "idade" => "17",
-    "curso" => "Desenvolvimento de Sistemas"
+    "nome" => $_POST["nome"],
+    "idade" => $_POST["idade"],
+    "curso" => $_POST["curso"]
     ];
     
     //5. ADICIONAR O ALUNO NO ARRAY
@@ -26,7 +27,7 @@
     //7. SALVAR NO ARQUIVO
     file_put_contents($caminho, $jsonAtualizado);
 
-    echo "DADOS REGISTRADOS EM dados.json"
+
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +38,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <from method= "POST">
+        <label>Nome:</label>
+        <input type="text" name="nome">
+        <label>Idade:</label>
+        <input type="number" name="idade">
+        <label>Curso:</label>
+        <input type="submit" name="curso">
+        <button type="submit">Cadastrar</button>
+    </from>
+
+    <h2>ALUNOS CADASTRADOS</h2>
+    <?php foreach($alunos as $aluno){ ?>
+        <h3><?= $aluno["nome"] ?></h3>
+        <p> Idade: <?= $aluno["idade"] ?></p>
+        <p>Curso: <?= $aluno["curso"] ?></p>
+    <?php } ?>
 </body>
 </html>
