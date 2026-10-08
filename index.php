@@ -40,8 +40,9 @@
             <h2>Desenvolvimento Web</h2>
 
             <p>
-                Página criada para organizar e acessar as atividades
-                desenvolvidas durante as aulas de PHP.
+                Me chamo Ana Luiza, tenho 17 anos e sou estudante da área de tecnologia.
+                Atualmente estou cursando técnico em Desenvolvimento de Sistemas e estudando Python e C, com foco em lógica de programação e desenvolvimento de software.
+                Tenho interesse em aprender cada vez mais e construir uma base sólida na área de programação.
             </p>
 
             <a href="#atividades" class="botao">
@@ -138,7 +139,7 @@
                     <span>CSS</span>
                 </div>
 
-                <a href="projetos/notasdesafio.php" class="link-projetos">
+                <a href="projetos/notas3desafio.php" class="link-projetos">
                     Abrir atividade →
                 </a>
 
