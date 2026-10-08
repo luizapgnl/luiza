@@ -1,6 +1,6 @@
 /* CONFIGURAÇÕES GERAIS */
 
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -130,6 +130,89 @@ header {
 }
 
 
+/* FORMULÁRIO DO ALUNO - ESPECÍFICO PARA A FOTO */
+
+.formulario-aluno {
+    background-color: #1b112f; /* Cor de fundo roxo escuro da imagem */
+    padding: 40px;
+    border-radius: 16px; /* Borda arredondada mais suave */
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto; /* Centralizado */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Sombra mais profunda */
+    color: white;
+    text-align: center;
+}
+
+.formulario-aluno h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.formulario-aluno p {
+    color: #a0a0a0; /* Cor do texto secundário */
+    margin-bottom: 30px;
+}
+
+.formulario-grupo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.formulario-grupo label {
+    display: block;
+    font-size: 14px;
+    color: #d0d0d0;
+    margin-bottom: 8px;
+}
+
+.formulario-grupo input {
+    width: 100%;
+    background-color: #2e2047; /* Cor de fundo do input */
+    border: 1px solid #4a3b68; /* Borda do input */
+    color: #e0e0e0;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.formulario-grupo input::placeholder {
+    color: #808080;
+}
+
+.botao-acao {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background-color 0.2s;
+}
+
+/* Estilos Específicos para os Botões */
+.botao-acao.primario {
+    background-color: #7e22ce; /* Botão principal roxo */
+    color: white;
+}
+
+.botao-acao.primario:hover {
+    background-color: #9333ea;
+}
+
+.botao-acao.secundario {
+    background-color: transparent; /* Botão secundário transparente */
+    color: #a855f7;
+    border: 1px solid #a855f7;
+}
+
+.botao-acao.secundario:hover {
+    background-color: rgba(168, 85, 247, 0.1);
+}
+
+
 /* VOLTAR PARA PROJETOS */
 
 .voltar-projetos {
@@ -213,4 +296,24 @@ footer a:hover {
         padding: 25px;
     }
 
+
+    /* FORMULÁRIO */
+
+    .formulario-aluno {
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    .formulario-aluno h2 {
+        font-size: 28px;
+    }
+
+    .formulario-grupo input {
+        padding: 12px;
+    }
+
+    .botao-acao {
+        padding: 14px;
+    }
 }
