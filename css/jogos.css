@@ -133,18 +133,32 @@ button:hover, .btn-destaque:hover, .btn-entrar:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
-
-.aprovado {
-    color: #4ade80;
+.sucesso {
+    color: #a855f7;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-.recuperacao {
-    color: #facc15;
+.erro {
+    color: #ff6b6b;
+    margin-top: 15px;
     font-weight: bold;
 }
 
-.reprovado {
-    color: #f87171;
+.voltar-menu {
+    display: block;
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #3b1760;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #633b85;
+    border-radius: 25px;
     font-weight: bold;
+}
+
+.voltar-menu:hover {
+    background-color: #512080;
+    border-color: #8b5cf6;
 }
