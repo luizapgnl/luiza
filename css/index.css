@@ -1,6 +1,6 @@
 /* CONFIGURAÇÕES GERAIS */
 
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -278,6 +278,16 @@ header {
 
 .sobre-texto p {
     margin-bottom: 15px;
+}
+
+
+/* CONFIGURAÇÕES DA FOTO (MODIFICAÇÃO/ESTILIZAÇÃO DA IMAGEM) */
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 
