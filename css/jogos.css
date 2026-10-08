@@ -147,18 +147,19 @@ button:hover, .btn-destaque:hover, .btn-entrar:hover {
 
 .voltar-menu {
     display: block;
+    width: 100%;
+    padding: 13px;
     margin-top: 12px;
-    padding: 12px;
-    background-color: #3b1760;
+    background: linear-gradient(90deg, #8b5cf6, #6d28d9);
     color: white;
     text-align: center;
     text-decoration: none;
-    border: 1px solid #633b85;
     border-radius: 25px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .voltar-menu:hover {
-    background-color: #512080;
-    border-color: #8b5cf6;
+    background: linear-gradient(90deg, #a78bfa, #7c3aed);
+    transform: translateY(-2px);
 }

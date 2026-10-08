@@ -100,14 +100,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <button type="submit">Cadastrar</button>
+            
+
+<?= $mensagem ?>
+
+<a href="/index.php" class="voltar-menu">Voltar ao menu</a>
 
         </form>
 
-        <!-- MENSAGEM APÓS O BOTÃO -->
 
         <?= $mensagem ?>
 
-        <!-- BOTÃO VOLTAR AO MENU -->
 
         <a href="/index.php" class="voltar-menu">
             Voltar ao menu
