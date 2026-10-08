@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt = $pdo->prepare(
             "INSERT INTO jogos (nome, genero, nota, ano_lancamento)
-             VALUES (:nome, :genero, :nota, :ano_lancamento)"
+            VALUES (:nome, :genero, :nota, :ano_lancamento)"
         );
 
         $stmt->bindValue(':nome', $nome);
