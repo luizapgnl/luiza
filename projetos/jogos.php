@@ -111,9 +111,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <?= $mensagem ?>
 
-
-        <a href="/index.php" class="voltar-menu">
-            Voltar ao menu
         </a>
 
     </div>
