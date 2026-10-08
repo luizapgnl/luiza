@@ -1,7 +1,7 @@
 /* CONFIGURAÇÕES GERAIS */
 
-{
-    margin : 0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -193,6 +193,7 @@ header {
 }
 
 /* Estilos Específicos para os Botões */
+
 .botao-acao.primario {
     background-color: #7e22ce; /* Botão principal roxo */
     color: white;
