@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar">
 
-            <h2 class="logo">Ana Luiza</h2>
+            <h2 class="logo">Ana Luiza 🏹🍃</h2>
 
             <ul class="menu">
                 <li><a href="#inicio">Início</a></li>
