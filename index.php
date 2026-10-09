@@ -87,7 +87,7 @@
                     <span>CSS</span>
                 </div>
 
-                <a href="projetos/idade.php" class="link-projetos">
+                <a href="projetos/idade.php" class="link-projeto">
                     Abrir atividade →
                 </a>
 
@@ -113,7 +113,7 @@
                     <span>CSS</span>
                 </div>
 
-                <a href="projetos/notas.php" class="link-projetos">
+                <a href="projetos/notas.php" class="link-projeto">
                     Abrir atividade →
                 </a>
 
@@ -139,7 +139,7 @@
                     <span>CSS</span>
                 </div>
 
-                <a href="projetos/notas3desafio.php" class="link-projetos">
+                <a href="projetos/notas3desafio.php" class="link-projeto">
                     Abrir atividade →
                 </a>
 
@@ -165,7 +165,7 @@
                     <span>CSS</span>
                 </div>
 
-                <a href="projetos/login-basico.php" class="link-projetos">
+                <a href="projetos/login-basico.php" class="link-projeto">
                     Abrir atividade →
                 </a>
 
