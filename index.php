@@ -197,6 +197,27 @@
 
             </div>
 
+            <div class="projeto-card">
+
+                <div class="projeto-numero">06</div>
+
+                <h3>Sistema para Indústrias</h3>
+
+                <p>
+                    Sistema para receber pedidos de empresas.
+                </p>
+
+                <div class="tecnologias">
+                    <span>HTML</span>
+                    <span>PHP</span>
+                    <span>CSS</span>
+                </div>
+
+                <a href="projetos/helpdesk.php" class="link-projeto">
+                    Abrir atividade →
+                </a>
+
+            </div>
 
         </div>
 
