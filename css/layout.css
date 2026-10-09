@@ -1,3 +1,4 @@
+
 /* CONFIGURAÇÕES GERAIS */
 
 * {
@@ -23,12 +24,14 @@ body {
 /* MENU / CABEÇALHO */
 
 header {
-    background-color: #111827;
+    background-color: #183525;
 
     position: sticky;
     top: 0;
 
     z-index: 100;
+
+    border-bottom: 1px solid #75632f;
 }
 
 .navbar {
@@ -44,7 +47,7 @@ header {
 }
 
 .logo {
-    color: white;
+    color: #f2d675;
 }
 
 .menu {
@@ -56,15 +59,17 @@ header {
 }
 
 .menu a {
-    color: #dddddd;
+    color: #e5e5d8;
 
     text-decoration: none;
 
     font-weight: bold;
+
+    transition: color 0.3s;
 }
 
 .menu a:hover {
-    color: #60a5fa;
+    color: #d4af37;
 }
 
 
@@ -88,7 +93,7 @@ header {
 }
 
 .projeto-tipo {
-    color: #2563eb;
+    color: #98751b;
 
     font-size: 16px;
     font-weight: bold;
@@ -101,7 +106,7 @@ header {
 .cabecalho-projeto h1 {
     font-size: 40px;
 
-    color: #111827;
+    color: #183525;
 
     margin-bottom: 10px;
 }
@@ -124,7 +129,9 @@ header {
 
     border-radius: 10px;
 
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    border: 1px solid #e0d7b8;
+
+    box-shadow: 0 3px 12px rgba(24, 53, 37, 0.10);
 
     margin-bottom: 30px;
 }
@@ -133,7 +140,7 @@ header {
 /* FORMULÁRIO DO ALUNO - ESPECÍFICO PARA A FOTO */
 
 .formulario-aluno {
-    background-color: #1b112f; /* Cor de fundo roxo escuro da imagem */
+    background-color: #183525; /* Cor de fundo verde escuro */
     padding: 40px;
     border-radius: 16px; /* Borda arredondada mais suave */
     width: 100%;
@@ -142,15 +149,17 @@ header {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Sombra mais profunda */
     color: white;
     text-align: center;
+    border: 1px solid #75632f;
 }
 
 .formulario-aluno h2 {
     font-size: 32px;
     margin-bottom: 10px;
+    color: #f2d675;
 }
 
 .formulario-aluno p {
-    color: #a0a0a0; /* Cor do texto secundário */
+    color: #d0d8ce; /* Cor do texto secundário */
     margin-bottom: 30px;
 }
 
@@ -162,22 +171,29 @@ header {
 .formulario-grupo label {
     display: block;
     font-size: 14px;
-    color: #d0d0d0;
+    color: #e0bd52;
     margin-bottom: 8px;
 }
 
 .formulario-grupo input {
     width: 100%;
-    background-color: #2e2047; /* Cor de fundo do input */
-    border: 1px solid #4a3b68; /* Borda do input */
-    color: #e0e0e0;
+    background-color: #12271b; /* Cor de fundo do input */
+    border: 1px solid #75632f; /* Borda do input */
+    color: #ffffff;
     padding: 14px;
     border-radius: 8px;
     font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .formulario-grupo input::placeholder {
-    color: #808080;
+    color: #aab4a7;
+}
+
+.formulario-grupo input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
 }
 
 .botao-acao {
@@ -189,28 +205,30 @@ header {
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 12px;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 /* Estilos Específicos para os Botões */
 
 .botao-acao.primario {
-    background-color: #7e22ce; /* Botão principal roxo */
-    color: white;
+    background: linear-gradient(135deg, #d4af37, #b68b20); /* Botão principal dourado */
+    color: #183525;
 }
 
 .botao-acao.primario:hover {
-    background-color: #9333ea;
+    background: linear-gradient(135deg, #f2d675, #d4af37);
+    transform: translateY(-2px);
 }
 
 .botao-acao.secundario {
     background-color: transparent; /* Botão secundário transparente */
-    color: #a855f7;
-    border: 1px solid #a855f7;
+    color: #e0bd52;
+    border: 1px solid #d4af37;
 }
 
 .botao-acao.secundario:hover {
-    background-color: rgba(168, 85, 247, 0.1);
+    background-color: rgba(212, 175, 55, 0.12);
+    border-color: #f2d675;
 }
 
 
@@ -221,14 +239,17 @@ header {
 }
 
 .voltar-projetos a {
-    color: #2563eb;
+    color: #80651d;
 
     text-decoration: none;
 
     font-weight: bold;
+
+    transition: color 0.3s;
 }
 
 .voltar-projetos a:hover {
+    color: #b68b20;
     text-decoration: underline;
 }
 
@@ -236,22 +257,25 @@ header {
 /* RODAPÉ */
 
 footer {
-    background-color: #111827;
+    background-color: #183525;
 
-    color: #cccccc;
+    color: #e0e5dc;
 
     text-align: center;
 
     padding: 30px;
+
+    border-top: 1px solid #75632f;
 }
 
 footer a {
-    color: #60a5fa;
+    color: #f2d675;
 
     text-decoration: none;
 }
 
 footer a:hover {
+    color: #d4af37;
     text-decoration: underline;
 }
 

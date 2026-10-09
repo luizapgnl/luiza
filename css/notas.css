@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at center, #23083b 0%, #0d0216 100%);
+    background: radial-gradient(circle at center, #31583e 0%, #0d2015 100%);
     color: #ffffff;
     padding: 20px;
 }
@@ -18,10 +18,10 @@ body {
 .card, .menu-card, .form-container {
     width: 100%;
     max-width: 440px;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(49, 88, 62, 0.18);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(192, 132, 252, 0.18);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 24px;
     padding: 35px 30px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
@@ -31,29 +31,28 @@ body {
 
 h1, h2 {
     font-size: 1.6rem;
-    color: #ffffff;
+    color: #f2d675;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
 .subtitulo {
     font-size: 0.85rem;
-    color: #a855f7;
+    color: #e0bd52;
     margin-bottom: 25px;
 }
 
 .status-box, .resultado, .sucesso, .erro {
     background: rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.25);
     border-radius: 14px;
     padding: 12px 16px;
     margin-bottom: 20px;
     font-size: 0.88rem;
-    color: #c084fc;
+    color: #f2d675;
     line-height: 1.4;
     text-align: center;
 }
-
 form div, #form-login div {
     text-align: left;
     margin-bottom: 16px;
@@ -64,7 +63,7 @@ label {
     margin-bottom: 6px;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #c084fc;
+    color: #e0bd52;
 }
 
 input[type="text"],
@@ -73,7 +72,7 @@ input[type="password"] {
     width: 100%;
     padding: 12px 18px;
     border-radius: 50px;
-    border: 1px solid rgba(192, 132, 252, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.35);
     background: rgba(0, 0, 0, 0.3);
     color: #ffffff;
     font-size: 0.95rem;
@@ -81,23 +80,25 @@ input[type="password"] {
     transition: all 0.3s ease;
 }
 
-input:focus {
-    border-color: #a855f7;
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
-    background: rgba(0, 0, 0, 0.5);
+input::placeholder {
+    color: #b7c2b5;
 }
 
+input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+}
 .menu-options {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 button, .btn-menu, body > a {
     display: block;
     width: 100%;
     padding: 14px 20px;
-    margin-top: 0; 
+    margin-top: 0;
     border: none;
     border-radius: 50px;
     font-size: 0.95rem;
@@ -110,28 +111,28 @@ button, .btn-menu, body > a {
 }
 
 button, .btn-destaque, .btn-entrar {
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
-    color: #ffffff;
+    background: linear-gradient(135deg, #d4af37, #a98520);
+    color: #183525;
 }
 
 button:hover, .btn-destaque:hover, .btn-entrar:hover {
-    background: linear-gradient(135deg, #a78bfa, #7c3aed);
-    box-shadow: 0 0 25px rgba(167, 139, 250, 0.6);
+    background: linear-gradient(135deg, #f2d675, #d4af37);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
     transform: translateY(-2px);
 }
 
 .btn-menu {
-    background: rgba(147, 51, 234, 0.25);
-    border: 1px solid rgba(192, 132, 252, 0.3);
-    color: #f3e8ff;
+    background: rgba(49, 88, 62, 0.45);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    color: #f2d675;
 }
 
 .btn-menu:hover {
-    background: rgba(168, 85, 247, 0.5);
-    border-color: #c084fc;
+    background: rgba(49, 88, 62, 0.8);
+    border-color: #d4af37;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
 .aprovado {
@@ -147,4 +148,19 @@ button:hover, .btn-destaque:hover, .btn-entrar:hover {
 .reprovado {
     color: #f87171;
     font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .card, .menu-card, .form-container {
+        padding: 28px 20px;
+        border-radius: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem;
+    }
 }
