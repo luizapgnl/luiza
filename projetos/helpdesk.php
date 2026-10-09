@@ -52,6 +52,7 @@ $relatorio = contarChamados();
 </head>
 <body>
     <h1>Sistema de Gerenciamento de Chamados</h1>
+    <link rel="stylesheet" href="/css/style_09.css">
 
     <?php if ($mensagem !== ''): ?>
         <p><?= htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8') ?></p>
