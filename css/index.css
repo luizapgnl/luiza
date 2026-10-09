@@ -1,4 +1,6 @@
-/* CONFIGURAÇÕES GERAIS */
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
 
 * {
     margin: 0;
@@ -12,21 +14,23 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0d0215, #170324, #0d0215);
-    color: #fff;
+    background: linear-gradient(135deg, #10291c, #1b3d2a, #10291c);
+    color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
 }
 
 
-/* MENU */
+/* ========================================
+   MENU
+======================================== */
 
 header {
-    background: #160522;
+    background: #183525;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #39204d;
+    border-bottom: 1px solid #75632f;
 }
 
 .navbar {
@@ -43,7 +47,7 @@ header {
 .titulo-secao,
 .projeto-card h3,
 .sobre-texto h3 {
-    color: #fff;
+    color: #f2d675;
 }
 
 .menu {
@@ -53,25 +57,33 @@ header {
 }
 
 .menu a {
-    color: #d8c5e5;
+    color: #e5e5d8;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 .menu a:hover,
 .link-projeto:hover,
 footer a:hover {
-    color: #c084fc;
+    color: #f2d675;
 }
 
 
-/* INÍCIO */
+/* ========================================
+   INÍCIO
+======================================== */
 
 .inicio {
     min-height: 85vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #0d0215, #1b052b, #0d0215);
+    background: linear-gradient(
+        135deg,
+        #10291c,
+        #31583e,
+        #10291c
+    );
 }
 
 .inicio-conteudo {
@@ -83,7 +95,7 @@ footer a:hover {
 .saudacao,
 .link-projeto,
 .formulario-aluno p {
-    color: #a855f7;
+    color: #e0bd52;
 }
 
 .saudacao {
@@ -97,19 +109,23 @@ footer a:hover {
 
 .inicio h2 {
     font-size: 30px;
-    color: #b8a6c5;
+    color: #d4ddcf;
     margin-bottom: 20px;
 }
 
 .inicio-conteudo > p {
     max-width: 600px;
-    color: #d4c6dc;
+    color: #e1e8df;
 }
 
 .botao,
 .botao-acao.primario {
-    background: linear-gradient(90deg, #8b5cf6, #6d28d9);
-    color: #fff;
+    background: linear-gradient(
+        90deg,
+        #d4af37,
+        #b68b20
+    );
+    color: #183525;
 }
 
 .botao {
@@ -119,16 +135,23 @@ footer a:hover {
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .botao:hover,
 .botao-acao.primario:hover {
-    background: linear-gradient(90deg, #a78bfa, #7c3aed);
+    background: linear-gradient(
+        90deg,
+        #f2d675,
+        #d4af37
+    );
     transform: translateY(-2px);
 }
 
 
-/* SEÇÕES */
+/* ========================================
+   SEÇÕES
+======================================== */
 
 .secao {
     max-width: 1100px;
@@ -144,12 +167,14 @@ footer a:hover {
 
 .subtitulo-secao {
     text-align: center;
-    color: #a99ab3;
+    color: #c1cbbd;
     margin-bottom: 40px;
 }
 
 
-/* CARDS DAS ATIVIDADES */
+/* ========================================
+   CARDS DAS ATIVIDADES
+======================================== */
 
 .projetos-container {
     display: grid;
@@ -159,25 +184,26 @@ footer a:hover {
 
 .projeto-card,
 .formulario-aluno {
-    background: #21102f;
-    border: 1px solid #49305f;
-    box-shadow: 0 8px 25px #0004;
+    background: #1d3828;
+    border: 1px solid #75632f;
+    box-shadow: 0 8px 25px #0005;
 }
 
 .projeto-card {
     padding: 30px;
     border-radius: 16px;
+    transition: transform 0.3s, border-color 0.3s;
 }
 
 .projeto-card:hover {
     transform: translateY(-5px);
-    border-color: #7c3aed;
+    border-color: #d4af37;
 }
 
 .projeto-numero {
     font-size: 35px;
     font-weight: bold;
-    color: #a855f7;
+    color: #e0bd52;
     margin-bottom: 15px;
 }
 
@@ -188,12 +214,14 @@ footer a:hover {
 
 .projeto-card p,
 .sobre-texto p {
-    color: #b8a9c2;
+    color: #cbd5c7;
     margin-bottom: 20px;
 }
 
 
-/* TECNOLOGIAS */
+/* ========================================
+   TECNOLOGIAS
+======================================== */
 
 .tecnologias {
     display: flex;
@@ -203,8 +231,8 @@ footer a:hover {
 }
 
 .tecnologias span {
-    background: #32164d;
-    color: #c084fc;
+    background: #294b34;
+    color: #f2d675;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 13px;
@@ -212,19 +240,24 @@ footer a:hover {
 }
 
 
-/* LINK DOS PROJETOS */
+/* ========================================
+   LINKS DOS PROJETOS
+======================================== */
 
 .link-projeto {
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 
-/* SOBRE */
+/* ========================================
+   SOBRE
+======================================== */
 
 .secao-destaque {
-    background: #170522;
-    border-block: 1px solid #39204d;
+    background: #183525;
+    border-block: 1px solid #75632f;
 }
 
 .secao-destaque > * {
@@ -244,11 +277,16 @@ footer a:hover {
     height: 200px;
     min-width: 200px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #806b32
+    );
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid #4c1d65;
+    border: 5px solid #8b7537;
+    overflow: hidden;
 }
 
 .foto img {
@@ -264,7 +302,9 @@ footer a:hover {
 }
 
 
-/* FORMULÁRIO DO ALUNO - ESPECÍFICO PARA A FOTO */
+/* ========================================
+   FORMULÁRIO DO ALUNO
+======================================== */
 
 .formulario-aluno {
     padding: 40px 30px;
@@ -272,7 +312,7 @@ footer a:hover {
     width: 100%;
     max-width: 500px;
     margin: 40px auto;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -295,30 +335,33 @@ footer a:hover {
     display: block;
     font-size: 14px;
     font-weight: bold;
-    color: #b98be5;
+    color: #e0bd52;
     margin-bottom: 7px;
 }
 
 .formulario-grupo input {
     width: 100%;
     padding: 13px 15px;
-    background: #160b20;
-    border: 1px solid #51366a;
+    background: #12271b;
+    border: 1px solid #75632f;
     border-radius: 25px;
-    color: #fff;
+    color: #ffffff;
     outline: none;
+    transition: border-color 0.3s;
 }
 
 .formulario-grupo input::placeholder {
-    color: #777080;
+    color: #aab4a7;
 }
 
 .formulario-grupo input:focus {
-    border-color: #8b5cf6;
+    border-color: #d4af37;
 }
 
 
-/* BOTÕES DO FORMULÁRIO */
+/* ========================================
+   BOTÕES DO FORMULÁRIO
+======================================== */
 
 .botao-acao {
     width: 100%;
@@ -327,6 +370,7 @@ footer a:hover {
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 12px;
+    transition: 0.3s;
 }
 
 .botao-acao.primario {
@@ -334,39 +378,50 @@ footer a:hover {
 }
 
 .botao-acao.secundario {
-    background: #3b1760;
-    color: #fff;
-    border: 1px solid #633b85;
+    background: #294b34;
+    color: #f2d675;
+    border: 1px solid #75632f;
 }
 
 .botao-acao.secundario:hover {
-    background: #512080;
-    border-color: #8b5cf6;
+    background: #31583e;
+    border-color: #d4af37;
+    transform: translateY(-2px);
 }
 
 
-/* RODAPÉ */
+/* ========================================
+   RODAPÉ
+======================================== */
 
 footer {
-    background: #0d0215;
-    color: #a99ab3;
+    background: #0d2015;
+    color: #c1cbbd;
     text-align: center;
     padding: 30px;
-    border-top: 1px solid #39204d;
+    border-top: 1px solid #75632f;
 }
 
 footer a {
-    color: #a855f7;
+    color: #e0bd52;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* RESPONSIVIDADE */
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
 
 @media (max-width: 800px) {
 
     .navbar,
     .sobre-conteudo {
         flex-direction: column;
+    }
+
+    .navbar {
+        gap: 20px;
     }
 
     .menu {
@@ -395,8 +450,62 @@ footer a {
         text-align: center;
     }
 
+    .sobre-texto {
+        width: 100%;
+    }
+
     .formulario-aluno {
         padding: 25px;
         max-width: 90%;
+    }
+}
+
+
+/* ========================================
+   TELAS PEQUENAS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .inicio h1 {
+        font-size: 34px;
+    }
+
+    .inicio h2 {
+        font-size: 21px;
+    }
+
+    .titulo-secao {
+        font-size: 29px;
+    }
+
+    .secao {
+        padding: 55px 18px;
+    }
+
+    .projeto-card {
+        padding: 24px;
+    }
+
+    .foto {
+        width: 170px;
+        height: 170px;
+        min-width: 170px;
+    }
+
+    .formulario-aluno {
+        padding: 22px 18px;
     }
 }
