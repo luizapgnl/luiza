@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $acao = $_POST["acao"];
 
     if ($acao === "cadastrar") {
-
         // 4. CRIAR UM ALUNO
         $novoAluno = [
             "nome" => $_POST["nome"],
