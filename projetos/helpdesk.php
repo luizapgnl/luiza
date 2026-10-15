@@ -25,15 +25,31 @@ if ($acao === "atualizar"){
         $_POST["status"] ?? ""
     );
 
-    $mensagem = sucesso ? "Status atualizado!" : "Não foi possível atualizar."; 
+    $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar."; 
 }
 
 if($acao === "excluir"){
-    $sucesso = excluirChamado(
-        (int) ($_POST["posicao"])
-    )
+    $sucesso = excluirChamado((int) ($_POST["posicao"] ?? -1));
+
+    $mensagem = $sucesso ? "Chamado excluído!" : "Não foi possível excluir.";
+}
 }
 
+$chamados = lerChamados();
+$relatorio = gerarRelatorio();
 
+//Evita exibie HTMLN enviado pelo usuário
+function escapar($valor){
+    return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+</body>
+</html>
