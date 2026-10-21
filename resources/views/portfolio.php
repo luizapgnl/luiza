@@ -7,7 +7,7 @@
 
     <title>Atividades PHP</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 
 <body>
