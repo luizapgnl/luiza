@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
     <!-- CABEÇALHO -->
@@ -51,7 +51,7 @@
 
     <!-- RODAPÉ -->
     <footer>
-        <p>Desenvolvido por <a href="ana315.devlook.xyz"> Ana Luiza </a> ° 2026 </p>
+        <p>Desenvolvido por <a href="ana315.devlook.xyz"> Nali </a> ° 2026 </p>
     </footer>
 </body>
 </html>
