@@ -1,37 +1,20 @@
 <?php
 
-// Exemplo SEM POO
-//ENCAPSULAMENTO
+// ENCAPSULAMENTO
 //Proteger informações para que não sejam alteradas de qualquer jeito.
+
 //HERANÇA
 //Criar uma classe nova aproveitando características de outra.
+
 //POLIMORFISMO
 //Permitir que objetos diferentes respondam à mesma ação de maneiras diferentes.
+
 //ABSTRAÇÃO
 //Mostrar o que é necessário e esconder detalhes complicados de funcionamento.
-$nome = "Luli";
-$vida = 100;
-$dano - 10;
 
-$nome = "Hellvig";
-$vida = 160;
-$dano - 15;
-
-$nome = "Leleco";
-$vida = 50;
-$dano - 99;
-
-function atacar($nome) {
-    echo "$nome realizou um ataque!";
-}
-
-atacar($nome);
-
-
-// Exemplo COM POO
 class Personagem {
     public $nome;
-    public $vida;
+    private $vida;
     public $dano;
 
     public function __construct($nome, $vida, $dano) {
@@ -39,27 +22,59 @@ class Personagem {
         $this->vida = $vida;
         $this->dano = $dano;
     }
+
+    //GETTER
+    public function getVida() {
+        return $this->vida;
+    }
+
+    //SETTER
+    public function setVida($vida) {
+        if ($vida < 0) {
+            $this->vida = 0;
+            echo "A vida não pode ser negativa!\n";
+            return;
+        }
+
+        $this->vida = $vida;
+    }
         
     public function atacar() {
         echo "$this->nome realizou um ataque!";
     }
 }
 
-$Luli = new Personagem("Luli", 100, 10);
-$Hellvig = new Personagem("Hellvig", 160, 15);
-$Leleco = new Personagem("Leleco", 50, 99);
+$luli= new Personagem("luli", 100, 10);
 
-$Luli->atacar();
+$luli->setvida(50);
 
-class Guerreiro extends Personagem{
-    public function defender(){
-        echo "$this-> nome levantou o escudo!";
+$alice = new Personagem("alice", 160, 15);
+$leleco = new Personagem("leleco", 50, 99);
+
+$luli->atacar(); // método herdado
+
+class Guerreiro extends Personagem {
+
+    // Sobrescrevendo o método da classe pai
+    public function atacar() {
+        echo "$this->nome atacou com uma espada!\n";
+    }
+
+    public function defender() {
+        echo "$this->nome levantou o escudo!";
     }
 }
-$guerreiro = new Guerreiro("Luli", 100, 10);
 
-$guerreiro->atacar(); //método herdado
-$guerreiro->defender(); //método próprio
+class Mago extends Personagem {
+    // Sobrescrevendo o método da classe pai
+    public function atacar() {
+        echo "$this->nome lançou uma bola de fogo!\n";
+    }
+}
+
+$guerreiro = new Guerreiro("leleco", 100, 10);
+$mago = new Mago ("alice", 160, 15);
+$luli= new Personagem("luli", 100, 10);
 
 
 //1. O que é uma classe?
