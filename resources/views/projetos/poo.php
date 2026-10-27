@@ -44,15 +44,6 @@ class Personagem {
     }
 }
 
-$luli= new Personagem("luli", 100, 10);
-
-$luli->setvida(50);
-
-$alice = new Personagem("alice", 160, 15);
-$leleco = new Personagem("leleco", 50, 99);
-
-$luli->atacar(); // método herdado
-
 class Guerreiro extends Personagem {
 
     // Sobrescrevendo o método da classe pai
