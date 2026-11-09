@@ -200,11 +200,11 @@
                 <div class="contato-container">
                     <div class="contato-item">
                         <h3>Email</h3>
-                        <p>chagasnathaly@gmail.com</p>
+                        <p>analuiza020109@gmail.com</p>
                     </div>
                     <div class="contato-item">
                         <h3>GitHub</h3>
-                        <p>github.com/nalichagas</p>
+                        <p>github.com/luizapgnl</p>
                     </div>
                 </div>
             </section>
@@ -213,7 +213,7 @@
 
     <footer>
         <p>
-            Desenvolvido por <a href="nathaly315.devlook.xyz"> Nathaly</a> • 2026
+            Desenvolvido por <a href="ana315.devlook.xyz"> Ana Luiza</a> • 2026
         </p>
     </footer>
 </body>
