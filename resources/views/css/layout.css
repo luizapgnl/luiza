@@ -1,0 +1,187 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8fa;
+    color: #49202b;
+    line-height: 1.6;
+}
+
+
+/* MENU / CABEÇALHO */
+
+header {
+    background-color: #4b0718;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #6d2039;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff5f7;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: #ffe1e9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff91aa;
+}
+
+
+/* PÁGINA DO PROJETO */
+
+.pagina-projeto {
+    min-height: calc(100vh - 150px);
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px 80px;
+}
+
+
+/* CABEÇALHO DO PROJETO */
+
+.cabecalho-projeto {
+    margin-bottom: 40px;
+}
+
+.projeto-tipo {
+    color: #c21845;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.cabecalho-projeto h1 {
+    font-size: 40px;
+    color: #7d1732;
+    margin-bottom: 10px;
+}
+
+.cabecalho-projeto > p:not(.projeto-tipo) {
+    color: #78545e;
+    font-size: 18px;
+    max-width: 700px;
+}
+
+
+/* ÁREA DA ATIVIDADE */
+
+.conteudo-projeto {
+    background-color: #ffffff;
+    padding: 35px;
+    border: 1px solid #f5d9e1;
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(125, 23, 50, 0.08);
+    margin-bottom: 30px;
+}
+
+
+/* VOLTAR PARA PROJETOS */
+
+.voltar-projetos {
+    margin-top: 30px;
+}
+
+.voltar-projetos a,
+.voltar-projetos a:visited {
+    color: #c21845;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.voltar-projetos a:hover {
+    color: #e04468;
+    text-decoration: underline;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #4b0718;
+    color: #f2cbd6;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #6d2039;
+}
+
+footer a,
+footer a:visited {
+    color: #ff91aa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffc0cf;
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    /* MENU */
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* PÁGINA */
+
+    .pagina-projeto {
+        padding: 40px 20px 60px;
+    }
+
+    /* CABEÇALHO */
+
+    .cabecalho-projeto h1 {
+        font-size: 32px;
+    }
+
+    /* CONTEÚDO */
+
+    .conteudo-projeto {
+        padding: 25px;
+    }
+}

@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #3b0714 0%, #0a0104 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 69, 103, 0.2);
+    border-top: 4px solid #e11d48;
+    border-radius: 20px;
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(225, 29, 72, 0.15);
+    text-align: center;
+}
+
+.header-escudo {
+    margin-bottom: 25px;
+}
+
+.escudo-svg {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 0 10px rgba(255, 69, 103, 0.6));
+}
+
+.header-escudo h2 {
+    color: #ffe4e8;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+    font-weight: 700;
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#form-login label {
+    font-size: 0.85rem;
+    color: #ff9aad;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#form-login input[type="text"],
+#form-login input[type="password"] {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 13px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+#form-login input[type="text"]:focus,
+#form-login input[type="password"]:focus {
+    outline: none;
+    border-color: #e11d48;
+    box-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.btn-entrar {
+    background: linear-gradient(135deg, #e11d48, #9f1239);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+}
+
+.btn-entrar:hover {
+    background: linear-gradient(135deg, #fb7185, #be123c);
+    box-shadow: 0 0 25px rgba(251, 113, 133, 0.7);
+    transform: translateY(-2px);
+}
+
+.sucesso {
+    margin-top: 20px;
+    padding: 12px;
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border-left: 4px solid #22c55e;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.erro {
+    margin-top: 20px;
+    padding: 12px;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border-left: 4px solid #ef4444;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
