@@ -1,5 +1,7 @@
-
-/* CONFIGURAÇÕES GERAIS */
+css
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
 
 * {
     margin: 0;
@@ -14,152 +16,166 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: #f5f5f5;
-    color: #222222;
+    background:
+        radial-gradient(circle at 15% 20%, #462365 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, #7139A5 0%, transparent 45%),
+        linear-gradient(135deg, #170D26, #29143D);
 
+    background-attachment: fixed;
+    color: #ffffff;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 
-/* MENU / CABEÇALHO */
+/* ========================================
+   MENU / CABEÇALHO
+======================================== */
 
 header {
-    background-color: #183525;
+    background: rgba(23, 13, 38, 0.7);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     position: sticky;
     top: 0;
-
     z-index: 100;
 
-    border-bottom: 1px solid #75632f;
+    border-bottom: 1px solid rgba(216, 180, 248, 0.25);
 }
 
 .navbar {
     max-width: 1100px;
-
     margin: auto;
     padding: 20px;
 
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    color: #f2d675;
+    color: #D8B4F8;
 }
 
 .menu {
     display: flex;
-
     gap: 25px;
-
     list-style: none;
 }
 
 .menu a {
-    color: #e5e5d8;
-
+    color: #F5EDFF;
     text-decoration: none;
-
     font-weight: bold;
-
     transition: color 0.3s;
 }
 
 .menu a:hover {
-    color: #d4af37;
+    color: #D8B4F8;
 }
 
 
-/* PÁGINA DO PROJETO */
+/* ========================================
+   PÁGINA DO PROJETO
+======================================== */
 
 .pagina-projeto {
     min-height: calc(100vh - 150px);
-
     max-width: 1100px;
-
     margin: auto;
-
     padding: 60px 20px 80px;
 }
 
 
-/* CABEÇALHO DO PROJETO */
+/* ========================================
+   CABEÇALHO DO PROJETO
+======================================== */
 
 .cabecalho-projeto {
     margin-bottom: 40px;
 }
 
 .projeto-tipo {
-    color: #98751b;
-
+    color: #C99AEF;
     font-size: 16px;
     font-weight: bold;
-
     text-transform: uppercase;
-
     margin-bottom: 5px;
 }
 
 .cabecalho-projeto h1 {
     font-size: 40px;
-
-    color: #183525;
-
+    color: #D8B4F8;
     margin-bottom: 10px;
 }
 
 .cabecalho-projeto > p:not(.projeto-tipo) {
-    color: #666666;
-
+    color: #D8CDE3;
     font-size: 18px;
-
     max-width: 700px;
 }
 
 
-/* ÁREA DA ATIVIDADE */
+/* ========================================
+   ÁREA DA ATIVIDADE
+======================================== */
 
 .conteudo-projeto {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     padding: 35px;
+    border-radius: 16px;
 
-    border-radius: 10px;
+    border: 1px solid rgba(216, 180, 248, 0.25);
 
-    border: 1px solid #e0d7b8;
-
-    box-shadow: 0 3px 12px rgba(24, 53, 37, 0.10);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
 
     margin-bottom: 30px;
 }
 
 
-/* FORMULÁRIO DO ALUNO - ESPECÍFICO PARA A FOTO */
+/* ========================================
+   FORMULÁRIO DO ALUNO
+======================================== */
 
 .formulario-aluno {
-    background-color: #183525; /* Cor de fundo verde escuro */
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
     padding: 40px;
-    border-radius: 16px; /* Borda arredondada mais suave */
+    border-radius: 16px;
+
     width: 100%;
     max-width: 500px;
-    margin: 40px auto; /* Centralizado */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Sombra mais profunda */
+    margin: 40px auto;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+
     color: white;
     text-align: center;
-    border: 1px solid #75632f;
+
+    border: 1px solid rgba(216, 180, 248, 0.25);
 }
 
 .formulario-aluno h2 {
     font-size: 32px;
     margin-bottom: 10px;
-    color: #f2d675;
+    color: #D8B4F8;
 }
 
 .formulario-aluno p {
-    color: #d0d8ce; /* Cor do texto secundário */
+    color: #D8CDE3;
     margin-bottom: 30px;
 }
 
@@ -171,30 +187,38 @@ header {
 .formulario-grupo label {
     display: block;
     font-size: 14px;
-    color: #e0bd52;
+    color: #C99AEF;
     margin-bottom: 8px;
 }
 
 .formulario-grupo input {
     width: 100%;
-    background-color: #12271b; /* Cor de fundo do input */
-    border: 1px solid #75632f; /* Borda do input */
+    background: rgba(23, 13, 38, 0.55);
+
+    border: 1px solid rgba(216, 180, 248, 0.3);
+
     color: #ffffff;
     padding: 14px;
     border-radius: 8px;
     font-size: 16px;
     outline: none;
+
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .formulario-grupo input::placeholder {
-    color: #aab4a7;
+    color: #BCA6CC;
 }
 
 .formulario-grupo input:focus {
-    border-color: #d4af37;
-    box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+    border-color: #D8B4F8;
+    box-shadow: 0 0 12px rgba(165, 107, 218, 0.3);
 }
+
+
+/* ========================================
+   BOTÕES DO FORMULÁRIO
+======================================== */
 
 .botao-acao {
     width: 100%;
@@ -205,82 +229,88 @@ header {
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 12px;
-    transition: background-color 0.2s, transform 0.2s;
+    transition: 0.3s;
 }
 
-/* Estilos Específicos para os Botões */
+/* BOTÃO PRINCIPAL */
 
 .botao-acao.primario {
-    background: linear-gradient(135deg, #d4af37, #b68b20); /* Botão principal dourado */
-    color: #183525;
+    background: linear-gradient(135deg, #D8B4F8, #8B50BD);
+    color: #170D26;
 }
 
 .botao-acao.primario:hover {
-    background: linear-gradient(135deg, #f2d675, #d4af37);
+    background: linear-gradient(135deg, #EAD5FF, #A56BDA);
     transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(165, 107, 218, 0.35);
 }
 
+/* BOTÃO SECUNDÁRIO */
+
 .botao-acao.secundario {
-    background-color: transparent; /* Botão secundário transparente */
-    color: #e0bd52;
-    border: 1px solid #d4af37;
+    background: rgba(113, 57, 165, 0.2);
+    color: #D8B4F8;
+    border: 1px solid rgba(216, 180, 248, 0.4);
 }
 
 .botao-acao.secundario:hover {
-    background-color: rgba(212, 175, 55, 0.12);
-    border-color: #f2d675;
+    background: rgba(113, 57, 165, 0.45);
+    border-color: #D8B4F8;
 }
 
 
-/* VOLTAR PARA PROJETOS */
+/* ========================================
+   VOLTAR PARA PROJETOS
+======================================== */
 
 .voltar-projetos {
     margin-top: 30px;
 }
 
 .voltar-projetos a {
-    color: #80651d;
-
+    color: #C99AEF;
     text-decoration: none;
-
     font-weight: bold;
-
     transition: color 0.3s;
 }
 
 .voltar-projetos a:hover {
-    color: #b68b20;
+    color: #EAD5FF;
     text-decoration: underline;
 }
 
 
-/* RODAPÉ */
+/* ========================================
+   RODAPÉ
+======================================== */
 
 footer {
-    background-color: #183525;
+    background: rgba(23, 13, 38, 0.8);
 
-    color: #e0e5dc;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
+    color: #D8CDE3;
     text-align: center;
-
     padding: 30px;
 
-    border-top: 1px solid #75632f;
+    border-top: 1px solid rgba(216, 180, 248, 0.2);
 }
 
 footer a {
-    color: #f2d675;
-
+    color: #D8B4F8;
     text-decoration: none;
 }
 
 footer a:hover {
-    color: #d4af37;
+    color: #EAD5FF;
     text-decoration: underline;
 }
 
 
-/* RESPONSIVIDADE */
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
 
 @media (max-width: 800px) {
 
@@ -288,18 +318,14 @@ footer a:hover {
 
     .navbar {
         flex-direction: column;
-
         gap: 15px;
     }
 
     .menu {
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 15px;
     }
-
 
     /* PÁGINA */
 
@@ -307,20 +333,17 @@ footer a:hover {
         padding: 40px 20px 60px;
     }
 
-
     /* CABEÇALHO */
 
     .cabecalho-projeto h1 {
         font-size: 32px;
     }
 
-
     /* CONTEÚDO */
 
     .conteudo-projeto {
         padding: 25px;
     }
-
 
     /* FORMULÁRIO */
 

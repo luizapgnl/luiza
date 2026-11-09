@@ -1,3 +1,4 @@
+css
 * {
     margin: 0;
     padding: 0;
@@ -6,43 +7,51 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f1f5f9;
-    color: #1e293b;
+    background: radial-gradient(circle at center, #29143D 0%, #170D26 100%);
+    background-attachment: fixed;
+    color: #F5EDFF;
     padding: 30px;
     line-height: 1.6;
 }
 
 h1 {
-    background-color: #1e40af;
-    color: white;
+    background: linear-gradient(135deg, #7139A5, #29143D);
+    color: #FFFFFF;
     text-align: center;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 16px;
     margin-bottom: 30px;
+    border: 1px solid rgba(216, 180, 248, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
-    color: #1e40af;
+    color: #D8B4F8;
     margin: 25px 0 15px;
-    border-bottom: 2px solid #cbd5e1;
+    border-bottom: 2px solid rgba(216, 180, 248, 0.25);
     padding-bottom: 8px;
 }
 
 h3 {
-    color: #1d4ed8;
+    color: #A56BDA;
     margin-bottom: 15px;
 }
 
 h4 {
     margin: 20px 0 10px;
-    color: #334155;
+    color: #C99AEF;
 }
 
 form {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 18px;
+    border: 1px solid rgba(216, 180, 248, 0.2);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
     margin-bottom: 25px;
 }
 
@@ -50,7 +59,7 @@ label {
     display: inline-block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #334155;
+    color: #C99AEF;
 }
 
 input[type="text"],
@@ -58,11 +67,18 @@ select,
 textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
+    border: 1px solid rgba(216, 180, 248, 0.25);
+    border-radius: 10px;
     font-size: 15px;
     margin-top: 5px;
-    background-color: #fff;
+    background: rgba(23, 13, 38, 0.55);
+    color: #F5EDFF;
+    transition: all 0.3s ease;
+}
+
+select option {
+    background: #29143D;
+    color: #F5EDFF;
 }
 
 textarea {
@@ -74,44 +90,55 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    border-color: #A56BDA;
+    box-shadow: 0 0 0 3px rgba(165, 107, 218, 0.2);
+    background: rgba(23, 13, 38, 0.8);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #A58BB9;
 }
 
 button {
     border: none;
     padding: 12px 20px;
-    border-radius: 6px;
+    border-radius: 10px;
     color: white;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.2s;
+    transition: all 0.3s ease;
 }
 
 button[name="acao"][value="cadastrar"] {
-    background-color: #2563eb;
+    background: linear-gradient(135deg, #A56BDA, #7139A5);
+    box-shadow: 0 4px 15px rgba(113, 57, 165, 0.25);
 }
 
 button[name="acao"][value="cadastrar"]:hover {
-    background-color: #1d4ed8;
+    background: linear-gradient(135deg, #D8B4F8, #A56BDA);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(165, 107, 218, 0.4);
 }
 
 button[name="acao"][value="atualizar"] {
-    background-color: #d97706;
+    background: linear-gradient(135deg, #C084FC, #9333EA);
 }
 
 button[name="acao"][value="atualizar"]:hover {
-    background-color: #b45309;
+    background: linear-gradient(135deg, #D8B4F8, #A56BDA);
+    transform: translateY(-2px);
 }
 
 button[name="acao"][value="excluir"] {
-    background-color: #dc2626;
+    background: linear-gradient(135deg, #E879A9, #BE185D);
 }
 
 button[name="acao"][value="excluir"]:hover {
-    background-color: #b91c1c;
+    background: linear-gradient(135deg, #FDA4C8, #E879A9);
+    transform: translateY(-2px);
 }
 
 body > p {
@@ -124,7 +151,7 @@ h2 + p {
 
 hr {
     border: none;
-    border-top: 1px solid #cbd5e1;
+    border-top: 1px solid rgba(216, 180, 248, 0.2);
     margin: 30px 0;
 }
 

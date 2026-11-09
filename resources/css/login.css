@@ -1,3 +1,4 @@
+css
 * {
     margin: 0;
     padding: 0;
@@ -6,26 +7,29 @@
 }
 
 body {
-    background: radial-gradient(circle at center, #31583e 0%, #0d2015 100%);
+    background: radial-gradient(circle at center, #29143D 0%, #170D26 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #ffffff;
+    color: #F5EDFF;
+    background-attachment: fixed;
 }
 
 .form-container {
-    background: rgba(49, 88, 62, 0.18);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-top: 4px solid #d4af37;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(216, 180, 248, 0.25);
+    border-top: 4px solid #A56BDA;
     border-radius: 20px;
     padding: 35px 30px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
-                0 0 30px rgba(212, 175, 55, 0.12);
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(113, 57, 165, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
     text-align: center;
 }
 
@@ -37,15 +41,15 @@ body {
     width: 65px;
     height: 65px;
     margin-bottom: 12px;
-    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
+    filter: drop-shadow(0 0 10px rgba(165, 107, 218, 0.6));
 }
 
 .header-escudo h2 {
-    color: #f2d675;
+    color: #D8B4F8;
     font-size: 1.3rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    border-bottom: 1px solid rgba(216, 180, 248, 0.25);
     padding-bottom: 12px;
     font-weight: 700;
 }
@@ -58,7 +62,7 @@ body {
 
 #form-login label {
     font-size: 0.85rem;
-    color: #e0bd52;
+    color: #C99AEF;
     margin-bottom: 8px;
     letter-spacing: 1px;
     font-weight: 600;
@@ -66,31 +70,31 @@ body {
 
 #form-login input[type="text"],
 #form-login input[type="password"] {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: rgba(23, 13, 38, 0.55);
+    border: 1px solid rgba(216, 180, 248, 0.25);
     border-radius: 10px;
     padding: 13px;
-    color: #ffffff;
+    color: #F5EDFF;
     font-size: 0.95rem;
     margin-bottom: 20px;
     transition: all 0.3s ease;
 }
 
 #form-login input::placeholder {
-    color: #aab4a7;
+    color: #A58BB9;
 }
 
 #form-login input[type="text"]:focus,
 #form-login input[type="password"]:focus {
     outline: none;
-    border-color: #d4af37;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-    background: rgba(0, 0, 0, 0.5);
+    border-color: #A56BDA;
+    box-shadow: 0 0 15px rgba(165, 107, 218, 0.3);
+    background: rgba(23, 13, 38, 0.75);
 }
 
 .btn-entrar {
-    background: linear-gradient(135deg, #d4af37, #a98520);
-    color: #183525;
+    background: linear-gradient(135deg, #A56BDA, #7139A5);
+    color: #FFFFFF;
     border: none;
     border-radius: 10px;
     padding: 14px;
@@ -101,44 +105,44 @@ body {
     letter-spacing: 1.5px;
     transition: all 0.3s ease;
     margin-top: 5px;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 15px rgba(113, 57, 165, 0.3);
 }
 
 .btn-entrar:hover {
-    background: linear-gradient(135deg, #f2d675, #d4af37);
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.45);
+    background: linear-gradient(135deg, #D8B4F8, #A56BDA);
+    box-shadow: 0 0 25px rgba(165, 107, 218, 0.45);
     transform: translateY(-2px);
 }
 
 .sucesso {
     margin-top: 20px;
     padding: 12px;
-    background: rgba(34, 197, 94, 0.15);
-    color: #4ade80;
-    border-left: 4px solid #22c55e;
+    background: rgba(34, 197, 94, 0.12);
+    color: #86EFAC;
+    border-left: 4px solid #22C55E;
     font-size: 0.9rem;
     border-radius: 8px;
     text-align: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 }
 
 .erro {
     margin-top: 20px;
     padding: 12px;
-    background: rgba(239, 68, 68, 0.15);
-    color: #f87171;
-    border-left: 4px solid #ef4444;
+    background: rgba(239, 68, 68, 0.12);
+    color: #FCA5A5;
+    border-left: 4px solid #EF4444;
     font-size: 0.9rem;
     border-radius: 8px;
     text-align: center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
 }
-
 
 @media (max-width: 480px) {
     .form-container {
         padding: 28px 22px;
         border-radius: 16px;
+        width: 90%;
     }
 
     .header-escudo h2 {

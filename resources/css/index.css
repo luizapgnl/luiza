@@ -1,3 +1,4 @@
+css
 /* ========================================
    CONFIGURAÇÕES GERAIS
 ======================================== */
@@ -14,10 +15,14 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #10291c, #1b3d2a, #10291c);
+    background:
+        radial-gradient(circle at 15% 20%, #462365 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, #7139A5 0%, transparent 40%),
+        linear-gradient(135deg, #170D26, #29143D, #170D26);
     color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
+    background-attachment: fixed;
 }
 
 
@@ -26,11 +31,13 @@ body {
 ======================================== */
 
 header {
-    background: #183525;
+    background: rgba(23, 13, 38, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #75632f;
+    border-bottom: 1px solid rgba(216, 180, 248, 0.25);
 }
 
 .navbar {
@@ -47,7 +54,7 @@ header {
 .titulo-secao,
 .projeto-card h3,
 .sobre-texto h3 {
-    color: #f2d675;
+    color: #D8B4F8;
 }
 
 .menu {
@@ -57,7 +64,7 @@ header {
 }
 
 .menu a {
-    color: #e5e5d8;
+    color: #F5EDFF;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -66,7 +73,7 @@ header {
 .menu a:hover,
 .link-projeto:hover,
 footer a:hover {
-    color: #f2d675;
+    color: #D8B4F8;
 }
 
 
@@ -80,9 +87,9 @@ footer a:hover {
     align-items: center;
     background: linear-gradient(
         135deg,
-        #10291c,
-        #31583e,
-        #10291c
+        rgba(23, 13, 38, 0.3),
+        rgba(113, 57, 165, 0.15),
+        rgba(23, 13, 38, 0.3)
     );
 }
 
@@ -95,7 +102,7 @@ footer a:hover {
 .saudacao,
 .link-projeto,
 .formulario-aluno p {
-    color: #e0bd52;
+    color: #C99AEF;
 }
 
 .saudacao {
@@ -109,23 +116,23 @@ footer a:hover {
 
 .inicio h2 {
     font-size: 30px;
-    color: #d4ddcf;
+    color: #E5D5F5;
     margin-bottom: 20px;
 }
 
 .inicio-conteudo > p {
     max-width: 600px;
-    color: #e1e8df;
+    color: #E8DDF2;
 }
 
 .botao,
 .botao-acao.primario {
     background: linear-gradient(
         90deg,
-        #d4af37,
-        #b68b20
+        #D8B4F8,
+        #8B50BD
     );
-    color: #183525;
+    color: #170D26;
 }
 
 .botao {
@@ -142,10 +149,11 @@ footer a:hover {
 .botao-acao.primario:hover {
     background: linear-gradient(
         90deg,
-        #f2d675,
-        #d4af37
+        #EAD5FF,
+        #A56BDA
     );
     transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(165, 107, 218, 0.35);
 }
 
 
@@ -167,7 +175,7 @@ footer a:hover {
 
 .subtitulo-secao {
     text-align: center;
-    color: #c1cbbd;
+    color: #C8B8D8;
     margin-bottom: 40px;
 }
 
@@ -184,9 +192,13 @@ footer a:hover {
 
 .projeto-card,
 .formulario-aluno {
-    background: #1d3828;
-    border: 1px solid #75632f;
-    box-shadow: 0 8px 25px #0005;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(216, 180, 248, 0.2);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
 }
 
 .projeto-card {
@@ -197,13 +209,14 @@ footer a:hover {
 
 .projeto-card:hover {
     transform: translateY(-5px);
-    border-color: #d4af37;
+    border-color: #A56BDA;
+    box-shadow: 0 12px 35px rgba(113, 57, 165, 0.25);
 }
 
 .projeto-numero {
     font-size: 35px;
     font-weight: bold;
-    color: #e0bd52;
+    color: #C99AEF;
     margin-bottom: 15px;
 }
 
@@ -214,7 +227,7 @@ footer a:hover {
 
 .projeto-card p,
 .sobre-texto p {
-    color: #cbd5c7;
+    color: #D8CDE3;
     margin-bottom: 20px;
 }
 
@@ -231,8 +244,9 @@ footer a:hover {
 }
 
 .tecnologias span {
-    background: #294b34;
-    color: #f2d675;
+    background: rgba(139, 80, 189, 0.25);
+    border: 1px solid rgba(216, 180, 248, 0.2);
+    color: #D8B4F8;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 13px;
@@ -256,8 +270,10 @@ footer a:hover {
 ======================================== */
 
 .secao-destaque {
-    background: #183525;
-    border-block: 1px solid #75632f;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-block: 1px solid rgba(216, 180, 248, 0.2);
 }
 
 .secao-destaque > * {
@@ -279,14 +295,15 @@ footer a:hover {
     border-radius: 50%;
     background: linear-gradient(
         135deg,
-        #d4af37,
-        #806b32
+        #D8B4F8,
+        #7139A5
     );
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid #8b7537;
+    border: 5px solid #A56BDA;
     overflow: hidden;
+    box-shadow: 0 0 25px rgba(165, 107, 218, 0.3);
 }
 
 .foto img {
@@ -319,6 +336,7 @@ footer a:hover {
 .formulario-aluno h2 {
     font-size: 28px;
     margin-bottom: 8px;
+    color: #D8B4F8;
 }
 
 .formulario-aluno p {
@@ -335,27 +353,28 @@ footer a:hover {
     display: block;
     font-size: 14px;
     font-weight: bold;
-    color: #e0bd52;
+    color: #C99AEF;
     margin-bottom: 7px;
 }
 
 .formulario-grupo input {
     width: 100%;
     padding: 13px 15px;
-    background: #12271b;
-    border: 1px solid #75632f;
+    background: rgba(23, 13, 38, 0.55);
+    border: 1px solid rgba(216, 180, 248, 0.3);
     border-radius: 25px;
     color: #ffffff;
     outline: none;
-    transition: border-color 0.3s;
+    transition: 0.3s;
 }
 
 .formulario-grupo input::placeholder {
-    color: #aab4a7;
+    color: #BCA6CC;
 }
 
 .formulario-grupo input:focus {
-    border-color: #d4af37;
+    border-color: #D8B4F8;
+    box-shadow: 0 0 12px rgba(165, 107, 218, 0.3);
 }
 
 
@@ -378,14 +397,14 @@ footer a:hover {
 }
 
 .botao-acao.secundario {
-    background: #294b34;
-    color: #f2d675;
-    border: 1px solid #75632f;
+    background: rgba(113, 57, 165, 0.25);
+    color: #D8B4F8;
+    border: 1px solid rgba(216, 180, 248, 0.3);
 }
 
 .botao-acao.secundario:hover {
-    background: #31583e;
-    border-color: #d4af37;
+    background: rgba(113, 57, 165, 0.5);
+    border-color: #D8B4F8;
     transform: translateY(-2px);
 }
 
@@ -395,15 +414,17 @@ footer a:hover {
 ======================================== */
 
 footer {
-    background: #0d2015;
-    color: #c1cbbd;
+    background: rgba(23, 13, 38, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: #C8B8D8;
     text-align: center;
     padding: 30px;
-    border-top: 1px solid #75632f;
+    border-top: 1px solid rgba(216, 180, 248, 0.2);
 }
 
 footer a {
-    color: #e0bd52;
+    color: #C99AEF;
     text-decoration: none;
     transition: color 0.3s;
 }
