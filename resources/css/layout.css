@@ -1,0 +1,344 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5f5f5;
+    color: #222222;
+
+    line-height: 1.6;
+}
+
+
+/* MENU / CABEÇALHO */
+
+header {
+    background-color: #183525;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    border-bottom: 1px solid #75632f;
+}
+
+.navbar {
+    max-width: 1100px;
+
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #f2d675;
+}
+
+.menu {
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+.menu a {
+    color: #e5e5d8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #d4af37;
+}
+
+
+/* PÁGINA DO PROJETO */
+
+.pagina-projeto {
+    min-height: calc(100vh - 150px);
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 20px 80px;
+}
+
+
+/* CABEÇALHO DO PROJETO */
+
+.cabecalho-projeto {
+    margin-bottom: 40px;
+}
+
+.projeto-tipo {
+    color: #98751b;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.cabecalho-projeto h1 {
+    font-size: 40px;
+
+    color: #183525;
+
+    margin-bottom: 10px;
+}
+
+.cabecalho-projeto > p:not(.projeto-tipo) {
+    color: #666666;
+
+    font-size: 18px;
+
+    max-width: 700px;
+}
+
+
+/* ÁREA DA ATIVIDADE */
+
+.conteudo-projeto {
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e0d7b8;
+
+    box-shadow: 0 3px 12px rgba(24, 53, 37, 0.10);
+
+    margin-bottom: 30px;
+}
+
+
+/* FORMULÁRIO DO ALUNO - ESPECÍFICO PARA A FOTO */
+
+.formulario-aluno {
+    background-color: #183525; /* Cor de fundo verde escuro */
+    padding: 40px;
+    border-radius: 16px; /* Borda arredondada mais suave */
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto; /* Centralizado */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4); /* Sombra mais profunda */
+    color: white;
+    text-align: center;
+    border: 1px solid #75632f;
+}
+
+.formulario-aluno h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #f2d675;
+}
+
+.formulario-aluno p {
+    color: #d0d8ce; /* Cor do texto secundário */
+    margin-bottom: 30px;
+}
+
+.formulario-grupo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.formulario-grupo label {
+    display: block;
+    font-size: 14px;
+    color: #e0bd52;
+    margin-bottom: 8px;
+}
+
+.formulario-grupo input {
+    width: 100%;
+    background-color: #12271b; /* Cor de fundo do input */
+    border: 1px solid #75632f; /* Borda do input */
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-grupo input::placeholder {
+    color: #aab4a7;
+}
+
+.formulario-grupo input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.25);
+}
+
+.botao-acao {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Estilos Específicos para os Botões */
+
+.botao-acao.primario {
+    background: linear-gradient(135deg, #d4af37, #b68b20); /* Botão principal dourado */
+    color: #183525;
+}
+
+.botao-acao.primario:hover {
+    background: linear-gradient(135deg, #f2d675, #d4af37);
+    transform: translateY(-2px);
+}
+
+.botao-acao.secundario {
+    background-color: transparent; /* Botão secundário transparente */
+    color: #e0bd52;
+    border: 1px solid #d4af37;
+}
+
+.botao-acao.secundario:hover {
+    background-color: rgba(212, 175, 55, 0.12);
+    border-color: #f2d675;
+}
+
+
+/* VOLTAR PARA PROJETOS */
+
+.voltar-projetos {
+    margin-top: 30px;
+}
+
+.voltar-projetos a {
+    color: #80651d;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: color 0.3s;
+}
+
+.voltar-projetos a:hover {
+    color: #b68b20;
+    text-decoration: underline;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #183525;
+
+    color: #e0e5dc;
+
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid #75632f;
+}
+
+footer a {
+    color: #f2d675;
+
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    /* MENU */
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    /* PÁGINA */
+
+    .pagina-projeto {
+        padding: 40px 20px 60px;
+    }
+
+
+    /* CABEÇALHO */
+
+    .cabecalho-projeto h1 {
+        font-size: 32px;
+    }
+
+
+    /* CONTEÚDO */
+
+    .conteudo-projeto {
+        padding: 25px;
+    }
+
+
+    /* FORMULÁRIO */
+
+    .formulario-aluno {
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 90%;
+    }
+
+    .formulario-aluno h2 {
+        font-size: 28px;
+    }
+
+    .formulario-grupo input {
+        padding: 12px;
+    }
+
+    .botao-acao {
+        padding: 14px;
+    }
+}

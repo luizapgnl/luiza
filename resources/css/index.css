@@ -1,0 +1,511 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #10291c, #1b3d2a, #10291c);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+header {
+    background: #183525;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #75632f;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo,
+.inicio h1,
+.titulo-secao,
+.projeto-card h3,
+.sobre-texto h3 {
+    color: #f2d675;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: #e5e5d8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.link-projeto:hover,
+footer a:hover {
+    color: #f2d675;
+}
+
+
+/* ========================================
+   INÍCIO
+======================================== */
+
+.inicio {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #10291c,
+        #31583e,
+        #10291c
+    );
+}
+
+.inicio-conteudo {
+    width: 1100px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.saudacao,
+.link-projeto,
+.formulario-aluno p {
+    color: #e0bd52;
+}
+
+.saudacao {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.inicio h1 {
+    font-size: 60px;
+}
+
+.inicio h2 {
+    font-size: 30px;
+    color: #d4ddcf;
+    margin-bottom: 20px;
+}
+
+.inicio-conteudo > p {
+    max-width: 600px;
+    color: #e1e8df;
+}
+
+.botao,
+.botao-acao.primario {
+    background: linear-gradient(
+        90deg,
+        #d4af37,
+        #b68b20
+    );
+    color: #183525;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover,
+.botao-acao.primario:hover {
+    background: linear-gradient(
+        90deg,
+        #f2d675,
+        #d4af37
+    );
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+.secao {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.titulo-secao {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: #c1cbbd;
+    margin-bottom: 40px;
+}
+
+
+/* ========================================
+   CARDS DAS ATIVIDADES
+======================================== */
+
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.projeto-card,
+.formulario-aluno {
+    background: #1d3828;
+    border: 1px solid #75632f;
+    box-shadow: 0 8px 25px #0005;
+}
+
+.projeto-card {
+    padding: 30px;
+    border-radius: 16px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.projeto-numero {
+    font-size: 35px;
+    font-weight: bold;
+    color: #e0bd52;
+    margin-bottom: 15px;
+}
+
+.projeto-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.projeto-card p,
+.sobre-texto p {
+    color: #cbd5c7;
+    margin-bottom: 20px;
+}
+
+
+/* ========================================
+   TECNOLOGIAS
+======================================== */
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tecnologias span {
+    background: #294b34;
+    color: #f2d675;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   LINKS DOS PROJETOS
+======================================== */
+
+.link-projeto {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+/* ========================================
+   SOBRE
+======================================== */
+
+.secao-destaque {
+    background: #183525;
+    border-block: 1px solid #75632f;
+}
+
+.secao-destaque > * {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #806b32
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #8b7537;
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.sobre-texto h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   FORMULÁRIO DO ALUNO
+======================================== */
+
+.formulario-aluno {
+    padding: 40px 30px;
+    border-radius: 18px;
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+.formulario-aluno h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.formulario-aluno p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.formulario-grupo {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.formulario-grupo label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e0bd52;
+    margin-bottom: 7px;
+}
+
+.formulario-grupo input {
+    width: 100%;
+    padding: 13px 15px;
+    background: #12271b;
+    border: 1px solid #75632f;
+    border-radius: 25px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.formulario-grupo input::placeholder {
+    color: #aab4a7;
+}
+
+.formulario-grupo input:focus {
+    border-color: #d4af37;
+}
+
+
+/* ========================================
+   BOTÕES DO FORMULÁRIO
+======================================== */
+
+.botao-acao {
+    width: 100%;
+    padding: 13px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.botao-acao.primario {
+    border: none;
+}
+
+.botao-acao.secundario {
+    background: #294b34;
+    color: #f2d675;
+    border: 1px solid #75632f;
+}
+
+.botao-acao.secundario:hover {
+    background: #31583e;
+    border-color: #d4af37;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    background: #0d2015;
+    color: #c1cbbd;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #75632f;
+}
+
+footer a {
+    color: #e0bd52;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .navbar,
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .inicio {
+        min-height: 70vh;
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .inicio h2 {
+        font-size: 23px;
+    }
+
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-conteudo {
+        text-align: center;
+    }
+
+    .sobre-texto {
+        width: 100%;
+    }
+
+    .formulario-aluno {
+        padding: 25px;
+        max-width: 90%;
+    }
+}
+
+
+/* ========================================
+   TELAS PEQUENAS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .inicio h1 {
+        font-size: 34px;
+    }
+
+    .inicio h2 {
+        font-size: 21px;
+    }
+
+    .titulo-secao {
+        font-size: 29px;
+    }
+
+    .secao {
+        padding: 55px 18px;
+    }
+
+    .projeto-card {
+        padding: 24px;
+    }
+
+    .foto {
+        width: 170px;
+        height: 170px;
+        min-width: 170px;
+    }
+
+    .formulario-aluno {
+        padding: 22px 18px;
+    }
+}

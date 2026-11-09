@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+h1 {
+    background-color: #1e40af;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #1e40af;
+    margin: 25px 0 15px;
+    border-bottom: 2px solid #cbd5e1;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin: 20px 0 10px;
+    color: #334155;
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+label {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #334155;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    margin-top: 5px;
+    background-color: #fff;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+button[name="acao"][value="cadastrar"] {
+    background-color: #2563eb;
+}
+
+button[name="acao"][value="cadastrar"]:hover {
+    background-color: #1d4ed8;
+}
+
+button[name="acao"][value="atualizar"] {
+    background-color: #d97706;
+}
+
+button[name="acao"][value="atualizar"]:hover {
+    background-color: #b45309;
+}
+
+button[name="acao"][value="excluir"] {
+    background-color: #dc2626;
+}
+
+button[name="acao"][value="excluir"]:hover {
+    background-color: #b91c1c;
+}
+
+body > p {
+    margin-bottom: 10px;
+}
+
+h2 + p {
+    margin-top: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #cbd5e1;
+    margin: 30px 0;
+}
+
+body > h3,
+body > p {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
