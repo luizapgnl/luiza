@@ -29,7 +29,7 @@
             <div class="inicio-conteudo">
 
                 <p class="saudacao">Olá! Eu sou</p>
-                <h1>Nathaly</h1>
+                <h1>Ana Luiza</h1>
                 <h2>Desenvolvedora em formação</h2>
                 <p> 
                 </p>
@@ -49,7 +49,7 @@
                 <div class="sobre-texto">
                     <h3>Quem sou eu?</h3>
                     <p>
-                        Meu nome é Nathaly e sou estudante de Desenvolvimento de Sistemas, com foco em programação e desenvolvimento web.
+                        Meu nome é Ana Luiza e sou estudante de Desenvolvimento de Sistemas, com foco em programação e desenvolvimento web.
                         Estou sempre buscando aprender novas tecnologias, aperfeiçoar minhas habilidades e colocar meus conhecimentos em prática 
                         por meio de projetos que envolvam lógica de programação, criação de interfaces e desenvolvimento de sistemas.
                         Este portfólio reúne alguns dos meus projetos, minha evolução como desenvolvedora e minha dedicação em construir soluções cada vez melhores. 
